@@ -1,0 +1,1029 @@
+DAT204 – Optimized Mock Exam 1
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, blank prefix/subnet reference sheet
+Part A – Short Answer & Applied Problems (50 pts)
+OSI & TCP/IP Layers (C1, 2 pts)
+To which OSI layer does the IP protocol primarily belong? What is the corresponding layer name in the 5-layer Internet model?
+HTTP Methods (C2, 4 pts)
+Explain two key differences between HTTP GET and HTTP POST requests, including how data is sent and implications for idempotency.
+DNS Record Types (C2, 4 pts)
+What information does an MX record provide? What information does a CNAME record provide?
+UDP Checksum Calculation (C3, 6 pts)
+Given the following 16-bit words from a UDP segment (including pseudo-header): 0xABCD, 0x1234, 0x5678. Calculate the 16-bit UDP checksum value that would be placed in the header. Show your steps (you can use hex or binary).
+TCP Connection Termination (C2, 4 pts)
+Outline the typical sequence of TCP segments (and their key flags) involved in gracefully closing a TCP connection initiated by the client.
+CIDR Prefix to Range (C2, 4 pts)
+What is the first and last usable host IP address in the network 172.20.32.0/22?
+ARP Operation (C2, 4 pts)
+Host A wants to send an IP datagram to Host B on the same Ethernet LAN, but Host A does not know Host B's MAC address. Describe the ARP process Host A initiates.
+Ethernet Switch Learning (C3, 6 pts)
+An Ethernet switch with an initially empty forwarding table receives the following frames in order:
+Source MAC: AA:AA:AA:AA:AA:AA, Dest MAC: BB:BB:BB:BB:BB:BB, Ingress Port: 1
+Source MAC: CC:CC:CC:CC:CC:CC, Dest MAC: AA:AA:AA:AA:AA:AA, Ingress Port: 2
+Show the state of the switch's forwarding table after these two frames. What action does the switch take for the second frame?
+IP Fragmentation (C2, 4 pts)
+An IP datagram of 4000 bytes (20-byte IP header) needs to be sent over a link with an MTU of 1500 bytes. How many fragments will be created? What will be the Identification, Flags (MF bit), and Fragment Offset values in the IP header of the second fragment?
+NAT & Port Numbers (C2, 4 pts)
+Why does a NAT router need to rewrite port numbers in addition to IP addresses for outgoing packets?
+Part B – Extended Scenarios & Deeper Analysis (50 pts)
+TCP Congestion Control Behavior (C4, 8 pts)
+A TCP connection experiences a packet loss detected by a timeout event when its cwnd is 32 MSS and ssthresh is 24 MSS. Describe, step-by-step, the changes to ssthresh and cwnd, and the subsequent phases the TCP connection will enter. Sketch a simple cwnd vs. time graph illustrating this event and recovery.
+Routing Table Lookup & LPM (C3, 6 pts)
+A router has the following forwarding table entries (longest prefix match applies):
+130.70.0.0/16 -> Interface 0
+130.70.96.0/20 -> Interface 1
+130.70.100.0/22 -> Interface 2
+0.0.0.0/0 -> Interface 3
+Determine the outgoing interface for datagrams destined to:
+a) 130.70.101.50
+b) 130.70.65.10
+c) 190.20.30.40
+Justify each choice.
+HTTP Performance: Non-Persistent vs. Persistent (C3, 6 pts)
+A web page consists of 1 base HTML file and 5 small referenced JPEG images. Assume RTT = 100ms. The time to transmit the HTML file or any single JPEG is negligible.
+a) How many RTTs are required to fetch the entire page using non-persistent HTTP without parallel connections?
+b) How many RTTs are required using persistent HTTP with pipelining?
+Wireless Hidden Terminal Problem (C2, 4 pts)
+Clearly explain the hidden terminal problem in 802.11 wireless networks. How does the RTS/CTS mechanism attempt to alleviate it?
+DHCP Lease Renewal (C3, 6 pts)
+Explain the purpose of the T1 and T2 timers in DHCP. What happens if a client fails to renew its lease with the original DHCP server by time T2?
+BitTorrent Piece Selection & Choking (C3, 6 pts)
+a) Explain the "rarest first" piece selection strategy in BitTorrent.
+b) Explain the "optimistic unchoke" aspect of BitTorrent's choking mechanism.
+TLS Handshake Overview (C3, 6 pts)
+Briefly outline the key goals and steps involved in the TLS 1.3 handshake that lead to the establishment of shared symmetric keys for encrypting application data. Mention the role of certificates.
+IPv6 Addressing (C2, 4 pts)
+An organization is assigned the IPv6 prefix 2001:db8:acad::/48. They want to create /60 subnets for different departments. How many /60 subnets can they create?
+QUIC vs. TCP+TLS (C2, 4 pts)
+State two distinct advantages QUIC offers over traditional TCP+TLS in terms of connection establishment and handling packet loss for multiple streams.
+
+DAT204 – Optimized Mock Exam 2
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, blank prefix/subnet reference sheet
+Part A – Short Answer & Applied Problems (50 pts)
+UDP Characteristics (C1, 2 pts)
+List two reasons why an application developer might choose UDP over TCP.
+DNS Query Types (C2, 4 pts)
+Differentiate clearly between an iterative DNS query and a recursive DNS query from the perspective of the initial querying host's local DNS server.
+TCP SYN Flood Attack (C2, 4 pts)
+Briefly explain what a TCP SYN flood attack is and why it can be effective in causing a denial of service.
+CIDR Aggregation (C3, 6 pts)
+Can the following IPv4 address blocks be aggregated? 200.20.16.0/24, 200.20.17.0/24, 200.20.18.0/24, and 200.20.19.0/24. If so, provide the single aggregated CIDR prefix. Show your reasoning.
+HTTP Persistent Connections (C2, 4 pts)
+What is the main advantage of HTTP persistent connections over non-persistent connections? How does pipelining further improve performance on persistent connections?
+Ethernet MAC Addresses (C1, 2 pts)
+What is the length of an Ethernet MAC address? How is it typically represented?
+CRC Error Detection Capability (C2, 4 pts)
+A CRC generator polynomial G(x) has a degree of r. What types of errors is this CRC guaranteed to detect? (e.g., single bit errors, burst errors of certain lengths).
+IP Address vs. Port Number (C1, 2 pts)
+What does an IP address identify? What does a port number identify?
+NAT Traversal for P2P (C2, 4 pts)
+Briefly explain one common technique that P2P applications (like Skype or older file-sharing apps) use to allow two peers, both behind different NATs, to communicate directly.
+TLS Purpose (C2, 4 pts)
+List three main security services that TLS (Transport Layer Security) aims to provide for an application like HTTPS.
+Part B – Extended Scenarios & Deeper Analysis (50 pts)
+TCP Sequence & Acknowledgment Numbers (C3, 6 pts)
+Host A sends a TCP segment to Host B with Seq=1000 and 500 bytes of data. Host B receives it correctly and has data to send back. The data Host B wants to send starts with byte number 3000 in its own send stream.
+a) What will be the Ack number in the segment Host B sends back to Host A (assuming no other data was received by B from A)?
+b) What will be the Seq number in that same segment sent by Host B?
+Dijkstra's Algorithm Application (C4, 8 pts)
+Given a network graph (nodes A-E, with link costs), apply Dijkstra's algorithm to find the shortest paths from source node A to all other nodes. Show the state of your distance table (D(v), p(v)) at each step (iteration).
+Subnetting Design (C4, 8 pts)
+You are given the network address 198.51.100.0/24. You need to create at least 5 subnets.
+a) What new subnet mask (in CIDR notation and dotted decimal) would you use?
+b) How many usable host addresses are available per subnet?
+c) List the network address of the first 3 subnets.
+OSPF vs. BGP (C3, 6 pts)
+Compare and contrast OSPF and BGP in terms of:
+a) Scope of use (intra-AS vs. inter-AS).
+b) Primary goal (e.g., shortest path vs. policy).
+c) Algorithm type (Link-State vs. Path-Vector).
+Wireshark Trace Analysis: TCP Retransmission (C3, 6 pts)
+You observe a Wireshark trace. Describe two distinct Wireshark indicators or packet sequences that would suggest a TCP segment has been lost and retransmitted.
+HTTP Caching with ETags & Last-Modified (C3, 6 pts)
+Explain how a web browser uses the If-None-Match (with ETag) and If-Modified-Since headers to perform conditional GET requests and potentially avoid re-downloading a cached object.
+IPv6 Header vs. IPv4 Header (C2, 4 pts)
+Name two fields present in the IPv4 header that were removed or significantly changed in the main IPv6 header, and explain the rationale for the change.
+QUIC Stream Multiplexing (C2, 4 pts)
+How does QUIC's stream multiplexing at the transport layer help mitigate head-of-line blocking compared to HTTP/1.1 over TCP?
+
+DAT204 – Optimized Mock Exam 3
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, blank prefix/subnet reference sheet
+Part A – Short Answer & Applied Problems (50 pts)
+Layer Encapsulation (C1, 2 pts)
+What is the term for the Application Layer data unit? What is it called after being encapsulated by the Transport Layer (TCP)?
+HTTP Status Code Families (C2, 4 pts)
+Briefly describe the general meaning of HTTP status codes in the 2xx, 3xx, 4xx, and 5xx ranges. Give one specific example code and its meaning from any two of these ranges.
+DNS Caching (C2, 4 pts)
+Why is DNS caching implemented? What role does the TTL (Time-To-Live) field play in DNS caching?
+UDP Port Numbers (C1, 2 pts)
+A client process creates a UDP socket to send a request to a well-known service (e.g., DNS on port 53). What range will the client's source port number typically be chosen from?
+TCP Flow Control (C2, 4 pts)
+Explain the purpose of TCP flow control and the primary mechanism (header field) it uses to achieve this.
+Subnet Mask (C2, 4 pts)
+An IP address is 172.16.10.100 and its subnet mask is 255.255.255.192. What is the CIDR prefix length for this subnet?
+Wireless CSMA/CA (C2, 4 pts)
+Why does 802.11 Wi-Fi use CSMA/CA (Collision Avoidance) instead of CSMA/CD (Collision Detection) like wired Ethernet?
+NAT (Network Address Translation) (C2, 4 pts)
+A small office uses NAT. Host A (192.168.1.10) sends a packet to a web server. The NAT router's public IP is 203.0.113.5. What source IP address and source port will the web server see? (Assume the NAT router modifies the port).
+TLS Symmetric vs. Asymmetric Cryptography (C2, 4 pts)
+During a TLS handshake and subsequent data transfer, when is asymmetric cryptography primarily used, and when is symmetric cryptography primarily used? Why this division?
+IP Datagram Time-To-Live (TTL) (C1, 2 pts)
+What is the purpose of the TTL field in an IP datagram header?
+Part B – Extended Scenarios & Deeper Analysis (50 pts)
+TCP Congestion Window Dynamics (C4, 8 pts)
+A TCP connection starts with cwnd = 1 MSS and ssthresh = 16 MSS. Assuming ACKs arrive every RTT without loss for the first few RTTs:
+a) Show the value of cwnd for the first 5 RTTs.
+b) In which RTT will cwnd first exceed ssthresh?
+c) What phase will TCP enter after cwnd exceeds ssthresh (assuming no loss)? How will cwnd grow in this new phase?
+Calculating End-to-End Delay (C3, 6 pts)
+A packet of size L=1000 bytes is sent from Host A to Host B. There is one router between them.
+Link A-Router: Rate R1 = 1 Mbps, Distance M1 = 100 km
+Link Router-B: Rate R2 = 2 Mbps, Distance M2 = 50 km
+Propagation speed S = 2.5 x 10^8 m/s. Assume router processing delay is 1ms and queuing delay is 0.
+Calculate the total end-to-end delay. Show all component delays.
+CIDR Allocation & Routing (C4, 8 pts)
+An ISP is allocated the block 150.100.128.0/19.
+a) The ISP wants to allocate a /22 block to Organization A. Provide a valid network address for Organization A from the ISP's block.
+b) Organization A further subnets its /22 block into /25 subnets. How many /25 subnets can it create?
+c) If the ISP's router has an entry for Organization A's /22 block pointing to a specific interface, how does longest prefix matching ensure packets for Organization A's internal /25 subnets are still correctly routed initially towards Organization A?
+BGP Path Attributes (C3, 6 pts)
+Explain the purpose of the AS-PATH and NEXT-HOP attributes in BGP. How are they used in inter-AS routing?
+P2P File Distribution Time (Client-Server vs P2P) (C3, 6 pts)
+Consider distributing a file of F=10 Gbits to N=100 peers. The server's upload rate u_s = 100 Mbps. Each peer has a download rate d_i = 20 Mbps and an upload rate u_i = 10 Mbps.
+Calculate the minimum distribution time for:
+a) Client-Server distribution.
+b) Peer-to-Peer distribution.
+(Formulae: D_CS = max(NF/u_s, F/d_min) and D_P2P = max(F/u_s, F/d_min, NF/(u_s + Σu_i)))
+Ethernet Frame & CRC (C2, 4 pts)
+What is the purpose of the CRC field in an Ethernet frame? If the receiver computes a CRC that does not match the one in the frame, what action does it typically take?
+QUIC Connection ID (C2, 4 pts)
+Explain the role of the Connection ID in QUIC and how it helps maintain connections during client IP address changes (e.g., switching from Wi-Fi to cellular).
+Digital Certificates in TLS (C2, 4 pts)
+What is the primary purpose of a server's digital certificate in the TLS handshake? Which entity typically issues this certificate?
+
+DAT204 – Optimized Mock Exam 4
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, blank prefix/subnet reference sheet
+Part A – Short Answer & Applied Problems (50 pts)
+UDP vs. TCP Overhead (C1, 2 pts)
+What is the minimum header size for a UDP segment? What is the minimum header size for a TCP segment?
+HTTP Cookies (C2, 4 pts)
+Explain how cookies are used by websites to maintain state with a stateless protocol like HTTP. Mention Set-Cookie and Cookie headers.
+DNS Root Servers (C1, 2 pts)
+What is the primary function of DNS root servers in the DNS resolution process?
+Subnetting: Number of Hosts (C2, 4 pts)
+Your network address is 10.10.0.0/18. How many unique host IP addresses can this network support?
+TCP Reliable Data Transfer (C2, 4 pts)
+Host A sends a segment with Seq=500, Ack=200, and 100 bytes of data. Host B receives it. If Host B has no data to send back immediately, what will be the Seq and Ack numbers in the acknowledgment segment it sends?
+Wireshark Filters (C2, 4 pts)
+Provide a Wireshark display filter to show only HTTP GET requests. Provide another to show all TCP traffic to or from port 80.
+NAT Issues (C2, 4 pts)
+Describe one common problem or limitation that NAT introduces for certain types of applications (e.g., P2P, some games).
+Physical vs. MAC Address (C1, 2 pts)
+Where is a MAC address typically "burned in"? Is it changeable?
+TLS Forward Secrecy (C2, 4 pts)
+What is "forward secrecy" in the context of TLS, and why is it a desirable property?
+IPv6 Address Format (C1, 2 pts)
+Write the full, uncompressed IPv6 address for 2001:db8::1.
+Part B – Extended Scenarios & Deeper Analysis (50 pts)
+Link Utilization & Pipelining (C4, 8 pts)
+A 1 Gbps link has an RTT of 50 ms. Packets are 1500 bytes long.
+a) Calculate the bandwidth-delay product for this link.
+b) What is the link utilization if using a stop-and-wait protocol?
+c) How many packets need to be "in flight" (pipelined) to achieve at least 80% link utilization?
+Routing Algorithm Comparison: LS vs. DV (C3, 6 pts)
+Compare Link-State (LS) and Distance-Vector (DV) routing algorithms in terms of:
+a) Information shared (what is exchanged, and with whom).
+b) Complexity and potential issues (e.g., count-to-infinity).
+CIDR Network Design (C4, 8 pts)
+An organization is given the block 210.100.0.0/20. It needs to create the following subnets:
+Subnet A: 500 hosts
+Subnet B: 200 hosts
+Subnet C: 100 hosts
+Subnet D: 50 hosts
+Assign network addresses and prefix lengths for these subnets using VLSM, optimizing for address space conservation. List the network address, prefix, and broadcast address for each.
+DHCP DORA Process (C2, 4 pts)
+Draw a simple diagram illustrating the four messages (DORA) exchanged between a DHCP client and server for initial address allocation.
+TCP Fast Retransmit (C3, 6 pts)
+Explain the conditions that trigger TCP Fast Retransmit. Why is this mechanism generally faster than relying solely on timeouts for recovering from a single lost segment?
+Email Protocol Interaction (SMTP, POP3/IMAP) (C3, 6 pts)
+User Alice sends an email from her Outlook client to User Bob, who reads it using Gmail (web interface). Describe the sequence of application-layer protocols involved in getting the message from Alice's host to Bob's browser.
+BitTorrent Choking Algorithm (C2, 4 pts)
+Apart from "rarest first," what is the primary incentive mechanism BitTorrent peers use to encourage uploading (related to choking/unchoking)?
+Wireless CSMA/CA with RTS/CTS (C3, 6 pts)
+Draw a timeline diagram showing the sequence of frames (DIFS, SIFS, RTS, CTS, DATA, ACK) exchanged when a station successfully transmits a data frame using 802.11 CSMA/CA with the RTS/CTS mechanism enabled.
+
+DAT204 – Optimized Mock Exam 5
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, blank prefix/subnet reference sheet
+Part A – Short Answer & Applied Problems (50 pts)
+Application Layer Examples (C1, 2 pts)
+Name two application-layer protocols and the transport protocol (TCP or UDP) each typically uses.
+DNS TTL (C1, 2 pts)
+What is the purpose of the Time-To-Live (TTL) value in a DNS resource record?
+TCP vs. UDP Reliability (C2, 4 pts)
+If an application requires guaranteed delivery of data, which transport protocol (TCP or UDP) should it use and why? If it chose the other, what would the application need to implement itself?
+Subnetting: Broadcast Address (C2, 4 pts)
+What is the broadcast address for the network 192.168.16.0/21?
+HTTP Methods: GET vs. HEAD (C2, 4 pts)
+What is the key difference in the server's response to an HTTP GET request versus an HTTP HEAD request for the same resource? When might HEAD be useful?
+ARP Cache (C1, 2 pts)
+What is an ARP cache, and what is its primary purpose?
+CRC vs. Checksum (C2, 4 pts)
+State one advantage of using CRC for error detection at the link layer compared to the 1s complement checksum used by IP/TCP/UDP.
+Wireshark Display Filter (C1, 2 pts)
+Write a Wireshark display filter to show all packets to or from IP address 10.1.2.3.
+TLS Handshake Purpose (C2, 4 pts)
+Apart from server authentication, what are two other key objectives achieved during the TLS handshake before encrypted application data can be exchanged?
+IPv4 Header: Protocol Field (C1, 2 pts)
+What information does the "Protocol" field in the IPv4 header convey to the receiving host?
+Part B – Extended Scenarios & Deeper Analysis (50 pts)
+TCP Three-Way Handshake & Initial Sequence Numbers (C3, 6 pts)
+a) Draw a diagram illustrating the TCP three-way handshake. Label each segment with key flags (SYN, ACK) and symbolic sequence/acknowledgment numbers (e.g., Seq=x, Ack=y+1).
+b) Why are initial sequence numbers typically chosen randomly?
+Routing with Longest Prefix Match (C4, 8 pts)
+A router's forwarding table has the following entries:
+200.10.0.0/21 -> Output Port A
+200.10.4.0/22 -> Output Port B
+200.10.6.0/23 -> Output Port C
+200.0.0.0/8 -> Output Port D
+For each of the following destination IP addresses, determine the output port and briefly justify using the longest prefix match rule:
+a) 200.10.5.17
+b) 200.10.7.1
+c) 200.10.20.5
+Store-and-Forward Delay Calculation (C3, 6 pts)
+A 12,000-bit packet is sent from a source to a destination over two links connected by a single router. Both links have a transmission rate of 1 Mbps. The propagation delay for the first link is 5ms, and for the second link is 3ms. Assume the router uses store-and-forward packet switching and introduces a processing delay of 1ms. Calculate the total end-to-end delay. Ignore queuing delay.
+NAT Operation with Multiple Clients (C3, 6 pts)
+Two internal hosts, H1 (192.168.1.10) and H2 (192.168.1.20), simultaneously establish TCP connections to the same external web server (e.g., www.google.com on port 80). The NAT router's public IP is 203.0.113.7.
+Illustrate how the NAT table on the router might look for these two connections, showing how it differentiates traffic for H1 and H2.
+TCP Congestion Avoidance vs. Slow Start (C2, 4 pts)
+How does the rate of increase of the congestion window (cwnd) differ between TCP Slow Start and TCP Congestion Avoidance phases? What typically triggers the transition from Slow Start to Congestion Avoidance?
+BitTorrent Incentives (C2, 4 pts)
+Besides "rarest first," explain the "tit-for-tat" incentive mechanism in BitTorrent and how it encourages peers to upload.
+Digital Signatures vs. MACs (C3, 6 pts)
+Compare Digital Signatures and Message Authentication Codes (MACs) in terms of:
+a) The type of keys used (symmetric/asymmetric).
+b) The security properties they provide (confidentiality, integrity, authenticity, non-repudiation).
+c) Who can create and who can verify them.
+IPv6 Transition: Tunneling (C2, 4 pts)
+Briefly explain the concept of IPv6-in-IPv4 tunneling. Why is such a mechanism necessary?
+DAT204 – Mock Exam 1
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, subnet reference sheet
+
+Part A – Short Questions (50 pts)
+Question 1: TCP (6 pts)
+Given a TCP connection with MSS = 1200 bytes and cwnd = 3 MSS:
+a) How many bytes of unacknowledged data can be in flight?
+b) After receiving 3 duplicate ACKs, what happens to cwnd and ssthresh?
+
+Question 2: CRC (4 pts)
+Compute the CRC for the binary data 10110011 using the polynomial x^3 + x + 1.
+
+Question 3: UDP (4 pts)
+Explain clearly:
+a) Why UDP is considered unreliable.
+b) Why applications such as DNS and VoIP prefer UDP despite unreliability.
+
+Question 4: HTTP (4 pts)
+Identify and briefly explain the purpose of each HTTP header:
+a) ETag
+b) Cache-Control
+
+Question 5: DNS (4 pts)
+Explain the difference between authoritative and recursive DNS servers in resolving the domain www.example.com.
+
+Question 6: BitTorrent (6 pts)
+Describe briefly:
+a) The "rarest-first" algorithm and its advantage.
+b) Why BitTorrent uses tit-for-tat as an incentive mechanism.
+
+Question 7: TCP (6 pts)
+A TCP connection is established with a 3-way handshake. Write clearly the segments exchanged and the TCP flags used in each segment.
+
+Question 8: UDP (4 pts)
+Given UDP segment lengths: UDP header = 8 bytes, data = 512 bytes, IP header = 20 bytes. Compute the total packet length transmitted over IPv4.
+
+Question 9: SSL/TLS (4 pts)
+Explain briefly:
+a) The role of the "ClientHello" message.
+b) What is meant by "cipher-suite"?
+
+Question 10: OSI (2 pts)
+At which OSI layer do the following occur?
+a) MAC address learning
+b) Port numbers assignment
+
+Part B – Extended Scenario & Calculations (50 pts)
+Question 11: TCP Congestion Control (6 pts)
+Sketch and explain a TCP congestion control graph clearly showing: slow start, congestion avoidance, fast retransmit/recovery phases.
+
+Question 12: CIDR/Subnetting (8 pts)
+Your organization has a block 192.168.0.0/24.
+a) Divide it into two equal subnets. Provide their network and broadcast addresses.
+b) How many usable host addresses are available per subnet?
+
+Question 13: Routing (8 pts)
+Given the following routing table:
+
+vbnet
+Copy
+Edit
+Destination:   Gateway:     Interface:
+10.0.0.0/8     —            eth0
+10.1.1.0/24    10.0.0.254   eth1
+0.0.0.0/0      10.0.0.1     eth0
+Identify clearly the chosen path for packets destined to:
+a) 10.1.1.100
+b) 10.2.2.5
+
+Question 14: HTTP (4 pts)
+Describe step-by-step the HTTP request/response cycle when a browser requests a single HTML file over a persistent HTTP/1.1 connection.
+
+Question 15: NAT & DHCP (6 pts)
+A home router assigns IP addresses via DHCP and performs NAT:
+a) Explain the DHCP transaction process.
+b) Describe clearly what happens in NAT table entries when a client initiates a TCP session to an external web server.
+
+Question 16: DNS (4 pts)
+Given an A-record TTL of 1 hour:
+a) Explain what TTL signifies.
+b) What happens when the TTL expires?
+
+Question 17: SSL/TLS (4 pts)
+Explain briefly:
+a) Forward secrecy in TLS.
+b) The difference between symmetric and asymmetric encryption.
+
+Question 18: QUIC (6 pts)
+Describe QUIC protocol's key differences compared to TCP+TLS, particularly focusing on connection establishment and reliability mechanisms.
+
+Question 19: CRC (4 pts)
+Explain clearly the difference between single-bit error detection and burst error detection. Provide one example polynomial.
+
+Question 20: Wireshark (4 pts)
+How can Wireshark filters help isolate network issues? Provide two practical examples of filter expressions and their intended use.
+DAT204 – Mock Exam 3
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, subnet reference sheet
+
+Part A – Short Answer Questions (50 pts)
+Q1: DNS TTL & Caching (C2, 4 pts)
+Explain the effect of DNS TTL on cache behavior. What happens when TTL expires?
+
+Q2: TCP Sequence Numbers (C2, 4 pts)
+Given an initial TCP sequence number of 5000 and a payload of 800 bytes, what will be the sequence number of the next segment sent?
+
+Q3: HTTP Status Codes (C1, 2 pts)
+Briefly state the meaning of HTTP response codes 404 and 500.
+
+Q4: CIDR Subnet Calculation (C3, 6 pts)
+Given network 10.0.0.0/22, how many /26 subnets can it be divided into? List the network address of the first two subnets.
+
+Q5: UDP Length & Checksum (C2, 4 pts)
+Describe the fields used in calculating a UDP checksum, including the pseudo-header.
+
+Q6: DHCP Process (C2, 4 pts)
+Outline the DHCP messages exchanged between a client and server when the client first joins a network.
+
+Q7: SSL/TLS Encryption (C2, 4 pts)
+Explain the role of symmetric and asymmetric encryption in the TLS handshake.
+
+Q8: Wireshark Analysis (C1, 2 pts)
+Explain briefly what a Wireshark "tcp.analysis.out_of_order" filter captures.
+
+Q9: NAT Table Entries (C3, 6 pts)
+How does a NAT router handle multiple sessions from the same internal host to the same external service?
+
+Q10: BitTorrent "Choking" (C2, 4 pts)
+Explain the concept of "choking" and "unchoking" in BitTorrent.
+
+Part B – Extended Scenarios & Calculations (50 pts)
+Q11: TCP Congestion Avoidance (C4, 8 pts)
+Sketch the TCP congestion window (cwnd) behavior clearly indicating the phases of slow-start, congestion avoidance, and fast recovery. Describe specifically what triggers each phase change.
+
+Q12: DNS Query Resolution (C4, 8 pts)
+Describe clearly the difference between iterative and recursive DNS queries. Which query type would typically generate more traffic? Justify your answer.
+
+Q13: HTTP Performance (C3, 6 pts)
+You load a webpage consisting of an HTML file (3KB) and 10 image files (20KB each) using non-persistent HTTP connections. Calculate total load time given RTT = 100 ms and bandwidth = 8 Mbps. Assume no parallel connections.
+
+Q14: IPv6 Subnetting (C3, 6 pts)
+Given IPv6 block 2001:0db8:abcd::/48, create subnets of equal size /52. How many subnets can you create, and what is the first subnet's network address?
+
+Q15: CRC Polynomial (C3, 6 pts)
+Demonstrate clearly using polynomial arithmetic how CRC detects single-bit and burst errors. Use polynomial x³ + x + 1 for an example.
+
+Q16: Routing Tables (C4, 8 pts)
+Given routing table entries:
+
+nginx
+Copy
+Edit
+Destination         Gateway            Interface
+192.168.1.0/24      —                  eth0
+192.168.1.128/25    192.168.1.254      eth1
+0.0.0.0/0           192.168.1.1        eth0
+Clearly identify which interface is selected for packets destined for 192.168.1.130. Justify your choice using the longest-prefix matching rule.
+
+Q17: QUIC Protocol Advantages (C2, 4 pts)
+List two key advantages of QUIC protocol compared to traditional TCP/TLS connections.
+
+Q18: DHCP Lease Renewal (C2, 4 pts)
+If a DHCP lease duration is 48 hours, at what points (T1 and T2) does a client typically renew its lease? Explain what happens if renewal requests at T1 fail.
+
+Q19: SSL/TLS Cipher Suites (C2, 4 pts)
+Explain briefly what components are included in a typical TLS cipher suite name, for example TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384.
+
+Q20: UDP Packet Fragmentation (C2, 4 pts)
+A UDP packet size exceeds the MTU of the network. Explain what happens if the IPv4 header DF (Don't Fragment) bit is set versus not set.
+DAT204 – Mock Exam 3
+Duration: 3 hours
+Total Points: 100
+Permitted Aids: Calculator, subnet reference sheet
+
+Part A – Short Answer Questions (50 pts)
+Q1: DNS TTL & Caching (C2, 4 pts)
+Explain the effect of DNS TTL on cache behavior. What happens when TTL expires?
+
+Q2: TCP Sequence Numbers (C2, 4 pts)
+Given an initial TCP sequence number of 5000 and a payload of 800 bytes, what will be the sequence number of the next segment sent?
+
+Q3: HTTP Status Codes (C1, 2 pts)
+Briefly state the meaning of HTTP response codes 404 and 500.
+
+Q4: CIDR Subnet Calculation (C3, 6 pts)
+Given network 10.0.0.0/22, how many /26 subnets can it be divided into? List the network address of the first two subnets.
+
+Q5: UDP Length & Checksum (C2, 4 pts)
+Describe the fields used in calculating a UDP checksum, including the pseudo-header.
+
+Q6: DHCP Process (C2, 4 pts)
+Outline the DHCP messages exchanged between a client and server when the client first joins a network.
+
+Q7: SSL/TLS Encryption (C2, 4 pts)
+Explain the role of symmetric and asymmetric encryption in the TLS handshake.
+
+Q8: Wireshark Analysis (C1, 2 pts)
+Explain briefly what a Wireshark "tcp.analysis.out_of_order" filter captures.
+
+Q9: NAT Table Entries (C3, 6 pts)
+How does a NAT router handle multiple sessions from the same internal host to the same external service?
+
+Q10: BitTorrent "Choking" (C2, 4 pts)
+Explain the concept of "choking" and "unchoking" in BitTorrent.
+
+Part B – Extended Scenarios & Calculations (50 pts)
+Q11: TCP Congestion Avoidance (C4, 8 pts)
+Sketch the TCP congestion window (cwnd) behavior clearly indicating the phases of slow-start, congestion avoidance, and fast recovery. Describe specifically what triggers each phase change.
+
+Q12: DNS Query Resolution (C4, 8 pts)
+Describe clearly the difference between iterative and recursive DNS queries. Which query type would typically generate more traffic? Justify your answer.
+
+Q13: HTTP Performance (C3, 6 pts)
+You load a webpage consisting of an HTML file (3KB) and 10 image files (20KB each) using non-persistent HTTP connections. Calculate total load time given RTT = 100 ms and bandwidth = 8 Mbps. Assume no parallel connections.
+
+Q14: IPv6 Subnetting (C3, 6 pts)
+Given IPv6 block 2001:0db8:abcd::/48, create subnets of equal size /52. How many subnets can you create, and what is the first subnet's network address?
+
+Q15: CRC Polynomial (C3, 6 pts)
+Demonstrate clearly using polynomial arithmetic how CRC detects single-bit and burst errors. Use polynomial x³ + x + 1 for an example.
+
+Q16: Routing Tables (C4, 8 pts)
+Given routing table entries:
+
+nginx
+Copy
+Edit
+Destination         Gateway            Interface
+192.168.1.0/24      —                  eth0
+192.168.1.128/25    192.168.1.254      eth1
+0.0.0.0/0           192.168.1.1        eth0
+Clearly identify which interface is selected for packets destined for 192.168.1.130. Justify your choice using the longest-prefix matching rule.
+
+Q17: QUIC Protocol Advantages (C2, 4 pts)
+List two key advantages of QUIC protocol compared to traditional TCP/TLS connections.
+
+Q18: DHCP Lease Renewal (C2, 4 pts)
+If a DHCP lease duration is 48 hours, at what points (T1 and T2) does a client typically renew its lease? Explain what happens if renewal requests at T1 fail.
+
+Q19: SSL/TLS Cipher Suites (C2, 4 pts)
+Explain briefly what components are included in a typical TLS cipher suite name, for example TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384.
+
+Q20: UDP Packet Fragmentation (C2, 4 pts)
+A UDP packet size exceeds the MTU of the network. Explain what happens if the IPv4 header DF (Don't Fragment) bit is set versus not set.
+DAT204 – Mock Exam 4
+Duration: 3 hours | Total Points: 100 | Permitted Aids: Calculator, subnet table
+
+Part A – Short Questions (50 pts)
+1. TCP ACK (C2, 4 pts)
+Explain delayed ACK. How does it affect throughput?
+
+2. CIDR notation (C2, 4 pts)
+Convert 255.255.252.0 to CIDR notation. How many hosts can it accommodate?
+
+3. HTTP persistent connections (C1, 2 pts)
+What is HTTP pipelining?
+
+4. DNS Iterative Query (C2, 4 pts)
+Describe an iterative DNS query.
+
+5. UDP vs TCP headers (C1, 2 pts)
+List two header fields in TCP not found in UDP.
+
+6. NAT Types (C2, 4 pts)
+Briefly describe symmetric vs cone NAT.
+
+7. CRC Basics (C1, 2 pts)
+Why is CRC more reliable than simple parity?
+
+8. SSL/TLS handshake (C2, 4 pts)
+Name the first two messages sent by the client in a TLS handshake.
+
+9. Wireshark filter syntax (C2, 4 pts)
+Write filter syntax for capturing only DNS queries.
+
+10. QUIC basics (C2, 4 pts)
+Name two QUIC protocol benefits over TCP.
+
+Part B – Extended Questions (50 pts)
+11. TCP Reno vs Tahoe (C4, 8 pts)
+Compare Reno and Tahoe congestion control algorithms. Clearly illustrate cwnd behavior after packet loss.
+
+12. HTTP Caching Headers (C3, 6 pts)
+Explain and compare usage of HTTP headers Expires, Cache-Control, and Last-Modified.
+
+13. DNS Zone Transfer (C3, 6 pts)
+What is a DNS zone transfer? Under what circumstances is it performed, and how?
+
+14. IPv4 subnetting (C4, 8 pts)
+Divide 192.168.50.0/24 into four equal subnets. Provide subnet masks and network addresses.
+
+15. DHCP Relay Agent (C3, 6 pts)
+Explain the function of a DHCP relay agent, clearly showing the giaddr field's role.
+
+16. SSL/TLS Forward Secrecy (C3, 6 pts)
+Explain Perfect Forward Secrecy (PFS) in TLS, and why it enhances security.
+
+17. UDP checksum calculation (C2, 4 pts)
+Describe step-by-step how UDP checksum is calculated including pseudo-header.
+
+18. BitTorrent piece selection (C3, 6 pts)
+Explain how BitTorrent uses rarest-first strategy for efficient file distribution.
+DAT204 – Mock Exam 5
+Duration: 3 hours | Total Points: 100 | Permitted Aids: Calculator, subnet table
+
+Part A – Short Questions (50 pts)
+1. OSI Layer Functions (C1, 2 pts)
+At which OSI layer does IP fragmentation occur?
+
+2. TCP Duplicate ACK (C2, 4 pts)
+What does receipt of three duplicate ACKs typically indicate in TCP?
+
+3. CIDR aggregation (C3, 6 pts)
+Aggregate networks: 172.16.0.0/24, 172.16.1.0/24, 172.16.2.0/24, 172.16.3.0/24.
+
+4. HTTP/1.1 Keep-Alive (C2, 4 pts)
+Describe HTTP keep-alive and its benefits.
+
+5. DNS Record Types (C1, 2 pts)
+Briefly explain CNAME and MX DNS records.
+
+6. NAT Overload (PAT) (C2, 4 pts)
+Describe NAT overload (PAT) and its typical usage scenario.
+
+7. UDP Fragmentation (C2, 4 pts)
+Explain what happens if a UDP datagram exceeds MTU in IPv4 when DF=1.
+
+8. CRC Polynomial Choice (C2, 4 pts)
+Why is polynomial choice critical in CRC effectiveness?
+
+9. TLS Certificate (C2, 4 pts)
+What are the main contents of an SSL/TLS digital certificate?
+
+10. Wireshark TCP Reassembly (C2, 4 pts)
+Explain Wireshark's TCP reassembly feature briefly.
+
+Part B – Extended Questions (50 pts)
+11. TCP Window Scaling (C4, 8 pts)
+Explain TCP window scaling option, showing calculation with an example RTT = 50 ms, bandwidth = 1 Gbps.
+
+12. CIDR subnet design (C4, 8 pts)
+Design a subnet scheme from 10.0.0.0/20 providing 4 subnets each accommodating at least 200 hosts.
+
+13. HTTP Redirects (C3, 6 pts)
+Compare and contrast HTTP redirects status codes: 301, 302, 303, and 307.
+
+14. DNS Caching (C3, 6 pts)
+Explain DNS negative caching and how it benefits DNS efficiency.
+
+15. QUIC vs TCP (C3, 6 pts)
+Compare QUIC connection establishment with TCP+TLS, highlighting latency advantages.
+
+16. DHCP lease renewal (C2, 4 pts)
+Explain what happens at T1 and T2 in DHCP lease renewal.
+
+17. SSL/TLS Cipher Suites (C3, 6 pts)
+Explain the components of a TLS cipher suite clearly, using TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256 as an example.
+
+18. BitTorrent Choking Algorithm (C3, 6 pts)
+Clearly explain BitTorrent's choking algorithm and its role in fairness among peers.
+
+
+DAT204 – Mock Final Review Exam
+Duration: 3 hours  Total points: 100
+Aids: calculator, blank network prefix table.
+Answer all sub‑parts. Show calculations where asked; unlabeled scratch will not be graded.
+
+──────────────────────────────────
+Part A (short / applied) – 50 pts
+──────────────────────────────────
+1. TCP sequence trace (C3 6 pts)
+   The server sends SYN‑ACK (seq = 800, ack = 501). The client replies with a 300‑byte payload segment.
+   a) Show the sequence & acknowledgement numbers in that reply.
+   b) State the new cwnd value if the reply is the first ACK after a slow‑start round where cwnd = 4 MSS.
+
+2. CRC parity (C2 4 pts)
+   An 8‑bit polynomial x⁸ + x² + x + 1 is used. Compute the CRC for dataword 10011011.
+
+3. UDP checksum (C2 4 pts)
+   Given pseudo‑hdr sum = 0x4F10 and UDP hdr+data sum = 0xB2E3, compute the 16‑bit checksum transmitted.
+   Explain why a zero checksum is legal in IPv6.
+
+4. HTTP persistence (C2 4 pts)
+   A page has 1 HTML + 5 JPEGs (10 kB each) over a 100 ms RTT link.
+   a) RTTs for non‑persistent vs persistent without pipelining.
+   b) Name two HTTP headers enabling caching of the JPEGs.
+
+5. CIDR binary → dotted (C3 6 pts)
+   Convert 11000000 10101000 00000001 00010000/20 to dotted prefix; state host‑range.
+
+6. DNS operation (C2 4 pts)
+   Step‑by‑step how an iterative resolver finds www.cisco.com with empty cache. List RR types returned.
+
+7. BGP best path (C4 8 pts)
+   Two routes:
+     AS‑PATH 65001 64512, MED 20, LOCAL_PREF 90
+     AS‑PATH 64512,       MED 50, LOCAL_PREF 80
+   Which is preferred? Show decision sequence.
+
+8. DHCP timing (C3 6 pts)
+   Lease 24 h – calculate T₁ and T₂. Why broadcast at T₂?
+
+9. CRC vs IP checksum (C1 2 pts)
+   Two reasons Ethernet CRC detects error patterns IP 16‑bit checksum may miss.
+
+10. OSI encapsulation (C1 2 pts)
+    Arrange headers {IP, TCP, Ethernet, HTTP} as captured on sender NIC.
+    Briefly why receiver strips them in reverse.
+
+──────────────────────────────────
+Part B (extended / scenario) – 50 pts
+──────────────────────────────────
+11. NAT / port mapping (C3 6 pts)
+    Home router translates five TCP connections from 10.0.0.5:49160–49164.
+    a) Fill NAT table for ports 80 & 443.
+    b) Explain hair‑pin failure without loop‑back.
+
+12. Iterative DNS + EDNS0 size (C2 4 pts)
+    a) DNS header fields advertising EDNS0 (4096 B).
+    b) If answer = 3400 B, will response fragment or switch to TCP?
+
+13. BitTorrent tit‑for‑tat (C3 6 pts)
+    Explain unchoke‑slot algorithm for peer upload 200 kB/s, 4 slots.
+
+14. TLS 1.3 flight order (C2 4 pts)
+    Wire‑order & encryption state of: EncryptedExtensions, Finished, ClientHello, ServerHello, Certificate, CertificateVerify.
+
+15. Wireshark throughput (C2 4 pts)
+    1 249 280 bytes in 11.20 s (client→server). Compute goodput Mbit/s & classify bulk/interactive.
+
+16. QUIC 0‑RTT security (C3 6 pts)
+    Two risks of 0‑RTT vs 1‑RTT, and one mitigation each.
+
+17. CIDR VLSM design (C4 8 pts)
+    Create /26, /27, /28, /29 sub‑nets out of 203.0.113.0/24; give prefix & broadcast for each.
+
+18. TCP Reno cwnd graph (C4 8 pts)
+    On provided graph label: dup‑ACK loss, timeout loss, interval where cwnd = ssthresh/2. Give numeric cwnd values.
+
+19. CRC detect vs correct (C3 6 pts)
+    Prove CRC‑32 polynomial cannot correct but always detects a 2‑bit error.
+
+20. OSI rapid‑fire (C1 2 pts)
+    Tick highest layer processing each item:
+       a) ECN‑CE b) Host header c) TTL d) ACK flag e) 802.1Q tag
+
+
+DAT204 – Mock Exam 2
+Duration: 3 hours   Total Points: 100
+Permitted Aids: Calculator, subnet reference sheet
+
+Part A – Short Questions (50 pts)
+
+1. HTTP Methods (C2, 4 pts)
+   Clearly differentiate between the HTTP methods GET and POST in terms of caching, request body, and typical usage scenarios.
+
+2. DNS Hierarchy (C1, 2 pts)
+   Briefly explain the roles of root, TLD, and authoritative DNS servers.
+
+3. TCP Flags (C1, 2 pts)
+   Name the TCP flag used to terminate a connection gracefully. Describe its purpose.
+
+4. CIDR Addressing (C2, 4 pts)
+   Calculate how many hosts can exist in the subnet 172.16.10.0/26. Provide the subnet mask in dotted-decimal notation.
+
+5. UDP vs TCP (C2, 4 pts)
+   State two reasons why streaming services prefer UDP over TCP.
+
+6. DHCP Lease (C2, 4 pts)
+   Explain the meaning of T1 and T2 timers in DHCP.
+
+7. CRC Calculation (C3, 6 pts)
+   Calculate the CRC remainder of the dataword '1101011011' using polynomial 'x^4 + x + 1'.
+
+8. Wireshark Usage (C2, 4 pts)
+   What does the Wireshark filter 'tcp.analysis.lost_segment' detect? Provide one practical scenario.
+
+9. SSL/TLS Session (C2, 4 pts)
+   Briefly explain the difference between a TLS session and a TLS connection.
+
+10. OSI Model (C1, 2 pts)
+    State which OSI layer handles IP addressing and which handles MAC addressing.
+
+Part B – Extended Scenarios & Calculations (50 pts)
+
+11. TCP Congestion Control (C4, 8 pts)
+    Compare and contrast TCP Reno and TCP Tahoe, focusing on their response to packet loss detected by timeout and triple duplicate ACKs. Include a brief congestion window (cwnd) behavior example.
+
+12. CIDR & Routing (C4, 8 pts)
+    You are given subnets 192.168.10.0/25, 192.168.10.128/26, and 192.168.10.192/26. Can these be aggregated? If yes, show the smallest CIDR block aggregation and explain clearly the aggregation principle used.
+
+13. DNS Operation (C3, 6 pts)
+    A DNS resolver receives a query for 'example.com'. Provide step-by-step the iterative resolution process, starting from the root servers, when the cache is empty.
+
+14. HTTP Performance (C3, 6 pts)
+    A webpage consists of 1 HTML file (2KB) and 3 images (15KB each). Calculate the total time to download the webpage over a persistent HTTP/1.1 connection with pipelining. Assume RTT = 80ms, bandwidth = 10Mbps. Show all steps.
+
+15. NAT Translation (C3, 6 pts)
+    Explain clearly how Port Address Translation (PAT) works when two internal hosts communicate simultaneously to the same external server.
+
+16. BitTorrent Protocol (C2, 4 pts)
+    Describe clearly how BitTorrent ensures efficient distribution of rare pieces among peers.
+
+17. QUIC Protocol (C2, 4 pts)
+    List two advantages of QUIC over TCP in terms of connection establishment and multiplexing.
+
+18. SSL/TLS Handshake (C3, 6 pts)
+    Outline the sequence of messages exchanged in a TLS 1.3 handshake. State clearly at what point encryption begins.
+
+19. UDP Checksum (C2, 4 pts)
+    Given a UDP packet, explain how the checksum field is computed, including the pseudo-header.
+
+20. CRC Error Detection (C2, 4 pts)
+    Explain clearly how CRC detects burst errors. Provide an example with a short binary sequence.
+
+DAT204 – Mock Final Review Exam
+Duration: 3 hours  Total points: 100
+Aids: calculator, blank network prefix table.
+Answer all sub‑parts. Show calculations where asked; unlabeled scratch will not be graded.
+
+──────────────────────────────────
+Part A (short / applied) – 50 pts
+──────────────────────────────────
+1. TCP sequence trace (C3 6 pts)
+   The server sends SYN‑ACK (seq = 800, ack = 501). The client replies with a 300‑byte payload segment.
+   a) Show the sequence & acknowledgement numbers in that reply.
+   b) State the new cwnd value if the reply is the first ACK after a slow‑start round where cwnd = 4 MSS.
+
+2. CRC parity (C2 4 pts)
+   An 8‑bit polynomial x⁸ + x² + x + 1 is used. Compute the CRC for dataword 10011011.
+
+3. UDP checksum (C2 4 pts)
+   Given pseudo‑hdr sum = 0x4F10 and UDP hdr+data sum = 0xB2E3, compute the 16‑bit checksum transmitted.
+   Explain why a zero checksum is legal in IPv6.
+
+4. HTTP persistence (C2 4 pts)
+   A page has 1 HTML + 5 JPEGs (10 kB each) over a 100 ms RTT link.
+   a) RTTs for non‑persistent vs persistent without pipelining.
+   b) Name two HTTP headers enabling caching of the JPEGs.
+
+5. CIDR binary → dotted (C3 6 pts)
+   Convert 11000000 10101000 00000001 00010000/20 to dotted prefix; state host‑range.
+
+6. DNS operation (C2 4 pts)
+   Step‑by‑step how an iterative resolver finds www.cisco.com with empty cache. List RR types returned.
+
+7. BGP best path (C4 8 pts)
+   Two routes:
+     AS‑PATH 65001 64512, MED 20, LOCAL_PREF 90
+     AS‑PATH 64512,       MED 50, LOCAL_PREF 80
+   Which is preferred? Show decision sequence.
+
+8. DHCP timing (C3 6 pts)
+   Lease 24 h – calculate T₁ and T₂. Why broadcast at T₂?
+
+9. CRC vs IP checksum (C1 2 pts)
+   Two reasons Ethernet CRC detects error patterns IP 16‑bit checksum may miss.
+
+10. OSI encapsulation (C1 2 pts)
+    Arrange headers {IP, TCP, Ethernet, HTTP} as captured on sender NIC.
+    Briefly why receiver strips them in reverse.
+
+──────────────────────────────────
+Part B (extended / scenario) – 50 pts
+──────────────────────────────────
+11. NAT / port mapping (C3 6 pts)
+    Home router translates five TCP connections from 10.0.0.5:49160–49164.
+    a) Fill NAT table for ports 80 & 443.
+    b) Explain hair‑pin failure without loop‑back.
+
+12. Iterative DNS + EDNS0 size (C2 4 pts)
+    a) DNS header fields advertising EDNS0 (4096 B).
+    b) If answer = 3400 B, will response fragment or switch to TCP?
+
+13. BitTorrent tit‑for‑tat (C3 6 pts)
+    Explain unchoke‑slot algorithm for peer upload 200 kB/s, 4 slots.
+
+14. TLS 1.3 flight order (C2 4 pts)
+    Wire‑order & encryption state of: EncryptedExtensions, Finished, ClientHello, ServerHello, Certificate, CertificateVerify.
+
+15. Wireshark throughput (C2 4 pts)
+    1 249 280 bytes in 11.20 s (client→server). Compute goodput Mbit/s & classify bulk/interactive.
+
+16. QUIC 0‑RTT security (C3 6 pts)
+    Two risks of 0‑RTT vs 1‑RTT, and one mitigation each.
+
+17. CIDR VLSM design (C4 8 pts)
+    Create /26, /27, /28, /29 sub‑nets out of 203.0.113.0/24; give prefix & broadcast for each.
+
+18. TCP Reno cwnd graph (C4 8 pts)
+    On provided graph label: dup‑ACK loss, timeout loss, interval where cwnd = ssthresh/2. Give numeric cwnd values.
+
+19. CRC detect vs correct (C3 6 pts)
+    Prove CRC‑32 polynomial cannot correct but always detects a 2‑bit error.
+
+20. OSI rapid‑fire (C1 2 pts)
+    Tick highest layer processing each item:
+       a) ECN‑CE b) Host header c) TTL d) ACK flag e) 802.1Q tag
+DAT204 – Mock Review Exam #4
+Duration: 3 hours Total points: 100 Aids: calculator, subnet sheet
+
+────────────────────────────────────
+Part A – Short Applied (50 points)
+────────────────────────────────────
+1. TCP flag field (C1 2 pts)  
+   Which two bits must be set in a SYN‑ACK segment? Explain purpose of each.
+
+2. DNS RR types (C1 2 pts)  
+   Match: **A, AAAA, MX, CNAME** with descriptions *“IPv6 host”*, *“mail exchanger”*, *“alias”*, *“IPv4 host”*.
+
+3. NAT private blocks (C1 2 pts)  
+   State the three IETF‑reserved IPv4 private address ranges.
+
+4. HTTP status codes (C2 4 pts)  
+   Give meanings of codes **204, 301, 403, 503** and indicate whether each is cacheable.
+
+5. UDP checksum zero (C2 4 pts)  
+   a) In IPv4, what does checksum 0 mean?  
+   b) Why is this value illegal in IPv6?
+
+6. Subnet prefix math (C2 4 pts)  
+   How many /27 subnets fit inside 172.16.128.0/23? List network ID of the third subnet.
+
+7. DHCP relay agent (C2 4 pts)  
+   Explain function of `giaddr` and how it changes server selection.
+
+8. CRC syndrome (C2 4 pts)  
+   Define “syndrome” and state what syndrome 00…00 indicates.
+
+9. Wireshark TCP stream index (C2 4 pts)  
+   What does field **tcp.stream = 3** signify? How can you display only that stream?
+
+10. QUIC spin‑bit (C2 4 pts)  
+    How does the spin‑bit allow passive RTT estimation? Name one limitation.
+
+────────────────────────────────────
+Part B – Extended Scenario (50 points)
+────────────────────────────────────
+11. TCP congestion diagram (C3 6 pts)  
+    Given 12‑round cwnd plot (attached), label intervals of slow‑start vs congestion‑avoidance and compute throughput during rounds 6‑9 (MSS = 1460 B, RTT = 120 ms).
+
+12. HTTP persistent pipeline calc (C3 6 pts)  
+    Nine 64 kB objects over 200 ms RTT link with 1 Gb/s bottleneck. Compare transfer time for:  
+    a) Non‑persistent /1.0  
+    b) Persistent pipelined /1.1 (six outstanding). Neglect TCP slow‑start.
+
+13. CIDR longest‑prefix test (C3 6 pts)  
+    Routing table:  
+      198.51.100.0/25  → L1  
+      198.51.100.128/26 → L2  
+      198.51.100.192/27 → L3  
+      198.51.0.0/16     → L4  
+    Decide outgoing link for **198.51.100.157** and **198.51.100.195**; justify.
+
+14. BGP communities (C3 6 pts)  
+    Give two common well‑known communities and their operational use. Explain why communities are transitive.
+
+15. OSPF DR election (C3 6 pts)  
+    On a broadcast LAN three routers R1‑R3 with priorities 1, 0, 5 join. Identify DR & BDR and describe tie‑break.
+
+16. TLS handshake transcript hash (C3 6 pts)  
+    What is the transcript hash in TLS 1.3? Show where it is used and why it prevents downgrade.
+
+17. BitTorrent piece size (C4 8 pts)  
+    For a 3 GiB file choose optimal piece size among {16 KiB, 64 KiB, 512 KiB}. Analyse impact on overhead, rarest‑first efficiency and tracker load.
+
+18. IPv6 SLAAC + DHCPv6‑PD mix (C4 8 pts)  
+    Enterprise router receives a /56 via Prefix Delegation. Explain workflow for advertising /64s to VLANs via SLAAC while retaining central control via DHCPv6 options.
+
+19. CRC‑32 burst proof (C4 8 pts)  
+    Demonstrate mathematically that CRC‑32 detects any burst ≤ 32 bits. Provide example remainder calculation.
+
+20. TCP zero‑window probe (C5 10 pts)  
+    Design an experiment (capture + analysis) to observe zero‑window probing between a sender and an intentionally slow receiver. Include expected Wireshark patterns, sender algo, and how probe size is chosen in modern stacks.
+
+
+DAT204 – Mock Review Exam #5
+Duration: 3 hours Total points: 100 Aids: calculator, blank prefix table
+
+────────────────────────────────────
+Part A – Short / Applied (≈48 pts)
+────────────────────────────────────
+1. OSI layer mapping (C1 2 pts)  
+   Match DHCP, TLS, ICMP, Switch‑MAC learning to the highest OSI layer involved.
+
+2. DNS TTL field (C1 2 pts)  
+   Explain how a low TTL can aid CDN load balancing.
+
+3. NAT loopback scenario (C1 2 pts)  
+   Why does `ftp://public-ip` fail inside the LAN without NAT hair‑pin?
+
+4. Wireshark QUIC filter (C1 2 pts)  
+   Provide a display filter string to show QUIC traffic only (dst port 443/udp).
+
+5. HTTP ETag validation (C2 4 pts)  
+   Sequence: client caches object with `ETag: "v2"`, later sends conditional GET.  
+   a) Server reply if object unchanged.  
+   b) Does reply carry message body?
+
+6. UDP MTU issue (C2 4 pts)  
+   Packet length = 2 000 B, path MTU = 1 500 B, DF = 0. Describe fragmentation.
+
+7. CIDR host count (C2 4 pts)  
+   How many hosts fit into a /22? Show formula.
+
+8. TLS record fields (C2 4 pts)  
+   Name two differences between TLS 1.3 and 1.2 record layer.
+
+9. CRC syndrome meaning (C3 6 pts)  
+   Dataword 110101, divisor 1011: compute remainder and syndrome; interpret.
+
+10. OSPF cost puzzle (C4 8 pts)  
+    Path A: 100 Mb/s + 10 Gb/s; Path B: 10 Gb/s + 10 Gb/s. Using ref 100 Mb/s cost rule, which path is chosen? Explain step‑by‑step.
+
+*Subtotal Part A = 40 pts*
+
+────────────────────────────────────
+Part B – Extended / Scenario (60 pts)
+────────────────────────────────────
+11. TCP ACK delay impact (C3 6 pts)  
+    Link RTT = 40 ms. Receiver uses delayed ACK (200 ms). Compute throughput loss compared with immediate ACK for cwnd = 4 MSS.
+
+12. DNS negative caching (C3 6 pts)  
+    Describe SOA MINIMUM and how NXDOMAIN caching reduces root load.
+
+13. TCP vs BBR cwnd graph (C4 8 pts)  
+    Given plotted cwnd vs time for both algorithms over same path, explain why BBR maintains higher goodput at 1% loss.
+
+14. HTTP/3 datagram (C2 4 pts)  
+    Role of DATAGRAM frame vs STREAM in unreliable media.
+
+15. CIDR super‑aggregate (C3 6 pts)  
+    Combine /25, /26, /27 contiguous blocks starting at 198.18.0.0 into minimum prefixes.
+
+16. NAT logging compliance (C3 6 pts)  
+    List fields ISP must store for law‑enforcement traceback of CGN customers.
+
+17. BitTorrent seeding policy (C2 4 pts)  
+    Define “super‑seeding” and its advantages.
+
+18. IPv6 /56 split VLSM (C4 8 pts)  
+    Organisation allocates /60 to branch sites from /56 PD. How many /64s remain for HQ? Show bits.
+
+19. CRC‑32 error polynomial (C3 6 pts)  
+    Demonstrate a 33‑bit burst that CRC‑32 fails to detect (hint: polynomial multiple).
+
+20. QUIC ACK ranges (C2 4 pts)  
+    Explain how ACK range blocks compress gaps vs TCP SACK.
+
+*Total = 100 pts (C1 8 % , C2 36 % , C3 32 % , C4 24 %)*

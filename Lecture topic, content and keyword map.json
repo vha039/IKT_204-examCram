@@ -1,0 +1,332 @@
+
+
+
+
+{
+  "Quick reference":[
+  {"id":"CH1","file":"Chapter_1_24V_Lecture - Tagged.pdf","pages":79,
+   "keywords":["Intro","Internet","edge","core","delay"],"emph_pct":12.64},
+  {"id":"CH2","file":"Chapter_2_25V.pdf","pages":80,
+   "keywords":["HTTP","DNS","SMTP","P2P","Streaming"],"emph_pct":12.80},
+  {"id":"CH3A","file":"Chapter_3A_25V - Tagged.pdf","pages":35,
+   "keywords":["UDP","checksum","sockets"],"emph_pct":5.60},
+  {"id":"CH3B","file":"Chapter_3B_25V.pdf","pages":63,
+   "keywords":["TCP","reliability","congestion"],"emph_pct":10.08},
+  {"id":"CH4","file":"Chapter_4_25V - Tagged.pdf","pages":66,
+   "keywords":["IPv4","CIDR","DHCP","NAT","SDN"],"emph_pct":10.56},
+  {"id":"CH5","file":"Chapter_5_24V.pdf","pages":78,
+   "keywords":["OSPF","BGP","ICMP","SDN"],"emph_pct":12.48},
+  {"id":"CH6","file":"Chapter_6_25V - Tagged.pdf","pages":78,
+   "keywords":["CRC","Ethernet","VLAN","Switch"],"emph_pct":12.48},
+  {"id":"CH7","file":"Chapter_7_25V - Tagged.pdf","pages":51,
+   "keywords":["WiFi","RTS/CTS","mobility"],"emph_pct":8.16},
+  {"id":"CH8","file":"Chapter_8_25V - Tagged.pdf","pages":79,
+   "keywords":["TLS","HMAC","firewalls"],"emph_pct":12.64},
+  {"id":"LAB_UDP","file":"UDP socket programming - Tagged.pdf","pages":16,
+   "keywords":["socket","UDP","code"],"emph_pct":2.56},
+  {"id":"EXAM16F","file":"dat204-exam-fall 2016.pdf","pages": "N/A","keywords":["HTTP","DNS","ARP"]},
+  ],
+  "Chapter_1_24V_Lecture": {
+    "file_id": "Chapter_1_24V_Lecture-Tagged.pdf",
+    "core_outline": {
+      "1_Internet_overview": {
+        "definition": "interconnected ISPs → network-of-networks; edge hosts run applications; core uses routers + communication links",
+        "services_view": "infrastructure exposes programming hooks for distributed apps (HTTP, Skype, streaming) to invoke transport service" 
+      },
+      "2_protocol_concept": {
+        "format_order_actions": "message syntax, sequencing, event-driven actions; examples TCP connect, HTTP GET" 
+      },
+      "3_network_edge": {
+        "hosts": "clients / servers (often in data-centers)",
+        "access_nets": {
+          "dsl": "dedicated twisted-pair; 24–52 Mbps ↓ / 3.5–16 Mbps ↑", 
+          "cable": "HFC shared; 40 Mbps-1.6 Gbps ↓ / 30 Mbps-1 Gbps ↑ per channel",
+          "ftth": "1 Gbps symmetric (not in slides but implied)",
+          "wifi": "802.11 a/b/g/n/ac/ax 11-2400 Mbps",
+          "cellular": "4G ≈ 10 Mbps, 5G higher"
+        },
+        "home_net_topology": "modem ⇆ router/NAT ⇆ switch/WAP" 
+      },
+      "4_network_core": {
+        "switching": "packet vs circuit; Internet uses store-and-forward packet switching",
+        "internet_structure": "tier-1 global ISP ↔ regional/local ISP ↔ enterprise/home/mobile nets"
+      },
+      "5_performance_metrics": {
+        "delay_components": "proc + queue + transmit + propagate",
+        "throughput": "bottleneck link governs end-to-end",
+        "loss": "queue overflow drop"
+      },
+      "6_layering_model": "5-layer (app, transport, net, link, physical) + message naming (message/segment/datagram/frame)",
+      "7_security_intro": "cryptography, firewalls, IDS mentioned",
+      "8_history": "ARPANET 1960s → NSFNet 1980s → commercialization",
+      "_sources": ["turn0file0"]
+    }
+  },
+  "Chapter_2_25V": {
+    "file_id": "Chapter_2_25V.pdf",
+    "core_outline": {
+      "1_principles": {
+        "app_arch": ["client-server", "peer-to-peer"],
+        "process_addressing": "IP + port",
+        "transport_needs": ["reliability", "timing", "throughput", "security"]
+      },
+      "2_transport_bindings": {
+        "tcp_features": ["reliable", "flow ctl", "congestion ctl", "connection-oriented"],
+        "udp_features": ["unreliable", "connectionless", "low-overhead"]
+      },
+      "3_http": {
+        "versions": ["1.0 non-persistent", "1.1 persistent","HTTP/2 multiplexed","HTTP/3 QUIC"],
+        "msg_format": "start-line + headers + CRLF + body",
+        "cookies": "state via Set-Cookie/ Cookie",
+        "caching": "proxy stores objects; conditional GET (If-Modified-Since)",
+        "status_codes": {"200":"OK","301":"Moved","400":"Bad Request","404":"Not Found","505":"Version Not Supported"}
+      },
+      "4_email": {
+        "smtp_flow": "client → server : HELO, MAIL FROM, RCPT TO, DATA, QUIT",
+        "mime": "multipurpose encoding",
+        "imap_pop": "remote folder v. download-and-delete"
+      },
+      "5_dns": {
+        "hierarchy": "root → TLD → authoritative",
+        "resource_records": "A, AAAA, MX, NS, CNAME, TXT",
+        "query_types": "recursive vs iterative, caching, TTL"
+      },
+      "6_p2p": {
+        "bitTorrent": "tracker, torrent file, tit-for-tat choking algorithm",
+        "scalability": "self-scaling upload capacity"
+      },
+      "7_video_streaming": {
+        "dash": "manifest + segmented files, client-side adaptation",
+        "cdn": "edge cache selection via DNS or HTTP redirect"
+      },
+      "8_socket_api": "BSD sockets (socket, bind, listen, accept / connect, send/recv)",
+      "_sources": ["turn0file1"]
+    }
+  },
+  "Chapter_3A_25V": {
+    "file_id": "Chapter_3A_25V-Tagged.pdf",
+    "core_outline": {
+      "1_transport_services": ["logical end-to-end", "multiplex/demultiplex"],
+      "2_port_numbers": {
+        "well_known": {"HTTP":80,"HTTPS":443,"SMTP":25,"DNS":53},
+        "ranges": "0–1023 system, 1024–49151 registered, 49152–65535 dynamic"
+      },
+      "3_udp": {
+        "header": "srcPort, dstPort, length, checksum",
+        "use_cases": ["DNS, VoIP, streaming"]
+      },
+      "4_stop_and_wait_rdt3": {
+        "mechanisms": ["ACK/NACK","sequence number","timeout"],
+        "util_formula": "U = L/R  /  (RTT+L/R)"
+      },
+      "5_pipelining": {
+        "go-back-N": "single timer, cumulative ACK",
+        "selective_repeat": "per-pkt timer, individual ACK"
+      },
+      "_sources": ["turn0file2"]
+    }
+  },
+  "Chapter_3B_25V": {
+    "file_id": "Chapter_3B_25V.pdf",
+    "core_outline": {
+      "1_tcp_overview": ["byte-stream", "full-duplex", "connection-oriented"],
+      "2_segment_structure": "srcPort,dstPort,seq,ack,HLEN,flags,window,checksum,urgentPtr,options",
+      "3_connection_lifecycle": {
+        "three_way_handshake": "SYN → SYN-ACK → ACK",
+        "four_way_close": "FIN → ACK │ FIN → ACK"
+      },
+      "4_reliable_transport": {
+        "seq_ack": "cumulative ACK, fast retransmit (3 dup-ACK)",
+        "flow_control": "rwnd advertises buffer space"
+      },
+      "5_rtt_retrans_timeout": "EstimatedRTT = (1−α)·prev + α·SampleRTT; Timeout = EstRTT + 4·DevRTT",
+      "6_congestion_control": {
+        "aimd": "slow-start (cwnd++ per ACK), congestion-avoid (cwnd+=1/cwnd), triple-dup-ACK fast recovery",
+        "tcp_friendly_formula": "throughput ≈ MSS / (RTT·√p·2)"
+      },
+      "7_quic": "user-space over UDP, 0-RTT, stream multiplexing, encrypted headers",
+      "_sources": ["turn0file3"]
+    }
+  },
+  "Chapter_4_25V": {
+    "file_id": "Chapter_4_25V-Tagged.pdf",
+    "core_outline": {
+      "1_data_plane_vs_control": "forwarding local vs routing global (distributed or SDN)",
+      "2_router_components": ["input port", "switch fabric", "output port", "routing processor"],
+      "3_forwarding": {
+        "longest_prefix_match": "TCAM / trie lookup",
+        "switch_fabrics": ["memory", "bus", "crossbar"]
+      },
+      "4_queueing_scheduling": {
+        "buffering": "output/input queues, drop-tail",
+        "algorithms": ["FIFO", "priority", "round-robin", "WFQ"],
+        "net_neutrality_note": "scheduler choice impacts performance fairness"
+      },
+      "5_ip_datagram": "ver, hdrLen, typeOfService, totalLen, id, flags, fragOffset, TTL, proto, checksum, srcIP, dstIP, options, payload",
+      "6_addressing": {
+        "classless": "CIDR a.b.c.d/x",
+        "subnetting": "split address space, LPM",
+        "nat": "map inside local 10/172/192 ranges to global addr, port translation"
+      },
+      "7_ipv6": "128-bit addr, fixed 40-byte hdr, no checksum, extension hdrs, ICMPv6",
+      "8_generalized_forwarding": "match-action abstraction (OpenFlow fields, actions)",
+      "_sources": ["turn0file4"]
+    }
+  },
+  "Chapter_5_24V": {
+    "file_id": "Chapter_5_24V.pdf",
+    "core_outline": {
+      "1_control_plane_models": ["distributed (link-state, distance-vector)", "SDN centralised"],
+      "2_link_state_algorithm": {
+        "input": "global topology, link costs",
+        "dijkstra": "maintain N, d[v], p[v]; O(n²) complexity; oscillation risk if cost dynamic"
+      },
+      "3_distance_vector_algorithm": {
+        "bellman_ford": "Dx(y)=min_v{c(x,v)+Dv(y)}",
+        "loop_issue": "count-to-infinity, use split-horizon/poison-reverse"
+      },
+      "4_ospf": {
+        "areas": "hierarchical LS, Dijkstra per area",
+        "metrics": "cost=1/BW, authentication, equal-cost multipath, hello to discover neighbors"
+      },
+      "5_bgp": {
+        "eBGP_iBGP": "inter-AS path-vector vs internal route distribution",
+        "attributes": ["AS-PATH", "NEXT-HOP", "LOCAL_PREF", "MED"],
+        "decision_process": "localPref → AS-path length → origin → MED → eBGP over iBGP → IGP metric → router-ID"
+      },
+      "6_sdn_controllers": {
+        "openflow": "flow-table entries = match fields → actions, stats",
+        "onos/odl": "northbound REST APIs, southbound OpenFlow",
+        "benefits": "global view, simplified innovation"
+      },
+      "7_icmp": "type/code, echo (ping), destination unreachable, ttl expired, traceroute",
+      "_sources": ["turn0file5"]
+    }
+  },
+  {
+  "Chapter_6_25V": {
+    "file_id": "Chapter_6_25V-Tagged.pdf",
+    "core_outline": {
+      "1_link_layer_basics": {
+        "services": ["framing", "link-access (MAC)", "reliable delivery (rare)", "flow control", "error detection/correction"],
+        "NIC_impl": "HW/FW on adapter – moves frames host↔link"
+      },
+      "2_error_control": {
+        "checksum": "16-bit (UDP/TCP/IP/ICMP)", 
+        "parity": ["single-bit detect", "2-D detect+correct"], 
+        "CRC": "frame polynomial division; detects ≤ r bits"
+      },
+      "3_multiple_access": {
+        "channel_partition": ["TDMA", "FDMA"],
+        "random_access": ["Slotted ALOHA (37 % util)", "CSMA, CSMA/CD"],
+        "taking_turns": ["polling", "token ring"],
+        "efficiency_tradeoff": "partition good @high load, random good @low load"
+      },
+      "4_lans": {
+        "mac_addressing": "48-bit, burned-in; frame dst/src",
+        "arp": "IP→MAC resolution, broadcast query & cached reply",
+        "ethernet": "payload ≤1500, preamble+CRC, exponential back-off in legacy hubs",
+        "switches": "store-fwd, self-learning table, cut-through; eliminates collisions",
+        "vlans": "802.1Q tagging, isolation, trunk links"
+      },
+      "5_datacenter_networks": "layer-2 fabrics, fat-tree, MLAG, ECMP",
+      "6_day_in_life": "walk-through HTTP fetch – DNS, TCP 3WH, segments, frames, ARP, switching, routing"
+    },
+    "_sources": ["turn3file0"]
+  },
+  "Chapter_7_25V": {
+    "file_id": "Chapter_7_25V-Tagged.pdf",
+    "core_outline": {
+      "1_wireless_overview": {
+        "network_types": ["infrastructure (AP/cell)", "ad-hoc"],
+        "link_impairments": ["fading ∝(fd)^2", "interference", "multipath", "noise", "hidden/exposed terminal"]
+      },
+      "2_phy_access": {
+        "cdma": "orthogonal codes, spread spectrum",
+        "ofdm": "sub-carrier multiplexing"
+      },
+      "3_wifi_80211": {
+        "standards": {"b":"11 Mb/s 2.4 GHz","g":"54 Mb/s","n":"600 Mb/s","ac":"3.5 Gb/s","ax":"14 Gb/s"},
+        "ism_bands": "2.4 & 5 GHz unlicensed",
+        "architecture": "BSS, ESS, scanning & association (SSID/beacon/probe)",
+        "mac": "CSMA/CA + ACK, RTS/CTS to mitigate hidden terminal",
+        "frame": "MAC hdr, addr1-4, seq ctrl, CRC",
+        "mobility_same_subnet": "re-associate to stronger AP without DHCP",
+        "adv_features": ["MIMO", "channel bonding", "frame aggregation", "Bluetooth PAN"]
+      },
+      "4_cellular": {
+        "structure": "base station, freq reuse, handoff",
+        "4g_lte": "OFDM, EPC core",
+        "5g_nr": "mmWave, network slicing"
+      },
+      "5_mobility_mgmt": {
+        "principles": ["address vs identifier", "home/foreign agent, tunneling (MIP)"],
+        "practice": "carrier paging, location areas"
+      },
+      "6_transport_impact": "variable RTT/loss, fast retrans, TCP Westwood, QUIC features"
+    },
+    "_sources": ["turn3file1"]
+  },
+  "Chapter_8_25V": {
+    "file_id": "Chapter_8_25V-Tagged.pdf",
+    "core_outline": {
+      "1_security_goals": ["confidentiality", "integrity", "authenticity", "availability", "non-repudiation"],
+      "2_threats": ["eavesdrop", "modification", "spoofing", "replay", "DoS", "hijack"],
+      "3_crypto_primitives": {
+        "symmetric": ["DES (56-bit)", "3DES", "AES 128/192/256"],
+        "block_modes": ["ECB", "CBC", "CTR"],
+        "public_key": ["RSA", "Diffie-Hellman"],
+        "hash": ["MD5", "SHA-1/2"], 
+        "mac": "HMAC-k(m)",
+        "digital_sig": "sign_kpriv(hash)"
+      },
+      "4_key_management": {
+        "certificates": "X.509, CA signed, binds name↔pubkey",
+        "tls": "handshake, record protocol, forward secrecy",
+        "ipsec": "AH/ESP, IKE tunnels"
+      },
+      "5_layer_security": ["email (PGP, S/MIME)", "WPA3 SAE", "firewalls (stateful, NAT)", "intrusion detection (signature/anomaly)"],
+      "6_replay_defense": "nonces/timestamps, sequence numbers"
+    },
+    "_sources": ["turn3file2"]
+  },
+  "Packet_analysis_Wireshark": {
+    "file_id": "Packet analysis using Wireshark-Tagged.pdf",
+    "core_outline": {
+      "1_ping_workflow": "ICMP echo, optional DNS query if hostname",
+      "2_dns_resolution": "nslookup vs ping, local cache, UDP/53",
+      "3_wireshark_usage": ["capture filter vs display filter", "packet list/tree/bytes panes", "follow stream"],
+      "4_packet_walkthrough": "DNS query/response then ICMP echo/reply (screens p5-6)",
+      "5_host_discovery": "nmap -sn subnet – ARP sweep; output interpret", 
+      "6_port_scan": "nmap specific port, firewall 'filtered' state"
+    },
+    "_sources": ["turn3file3"]
+  },
+  "TCP_socket_programming": {
+    "file_id": "TCP socket programming-Tagged.pdf",
+    "core_outline": {
+      "1_api_flow": ["WSAStartup", "socket()", "bind()/listen()", "accept()", "connect()", "send()/recv()", "closesocket()", "WSACleanup()"],
+      "2_three_way_handshake": "SYN‒SYN-ACK‒ACK between connect & accept",
+      "3_multiclient": "new socket per accepted connection, distinguished by 4-tuple",
+      "4_server_code": "Winsock C snippets – IPv4, htons(), INADDR_ANY",
+      "5_client_code": "socket/connect to server IP:port, loopback example 127.0.0.1",
+      "6_diag_tools": ["nmap port scan", "netstat -b active connections"]
+    },
+    "_sources": ["turn3file4"]
+  },
+  "UDP_socket_programming": {
+    "file_id": "UDP socket programming-Tagged.pdf",
+    "core_outline": {
+      "1_socket_concepts": "datagram, no connection, sendto/recvfrom",
+      "2_api_flow": ["WSAStartup", "socket(AF_INET,SOCK_DGRAM)", "bind()", "sendto()/recvfrom()", "closesocket()"],
+      "3_endianness": "htons/htonl convert host byte order→network (big-endian)",
+      "4_server_example": "bind port 8888, recvfrom buffer & client addr, sendto reply",
+      "5_client_example": "InetPton() target IPv4, sendto message, recvfrom response",
+      "6_build_notes": "link Ws2_32.dll in CMake, CLion",
+      "7_exercise": "uppercase echo implementation"
+    },
+    "_sources": ["turn3file5"]
+  }
+}
+
+}

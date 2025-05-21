@@ -1,0 +1,236 @@
+[
+  {
+    "file": "dat204-exam-fall 2016.pdf",
+    "points_total": 100,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        29
+      ],
+      [
+        "HTTP",
+        15
+      ],
+      [
+        "DNS",
+        7
+      ],
+      [
+        "OSI",
+        2
+      ],
+      [
+        "NAT",
+        2
+      ]
+    ]
+  },
+  {
+    "file": "dat204-exam-fall 2017.pdf",
+    "points_total": 101,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        61
+      ],
+      [
+        "Routing",
+        47
+      ],
+      [
+        "HTTP",
+        29
+      ],
+      [
+        "DNS",
+        26
+      ],
+      [
+        "NAT",
+        23
+      ]
+    ]
+  },
+  {
+    "file": "dat204-exam-spring 2017.pdf",
+    "points_total": 100,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        21
+      ],
+      [
+        "HTTP",
+        18
+      ],
+      [
+        "NAT",
+        15
+      ],
+      [
+        "DNS",
+        5
+      ],
+      [
+        "CIDR_Subnet",
+        2
+      ]
+    ]
+  },
+  {
+    "file": "IKT204-exam-fall 2018.pdf",
+    "points_total": 99,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        38
+      ],
+      [
+        "NAT",
+        24
+      ],
+      [
+        "DHCP",
+        18
+      ],
+      [
+        "DNS",
+        15
+      ],
+      [
+        "CIDR_Subnet",
+        13
+      ]
+    ]
+  },
+  {
+    "file": "dat204-exam-fall 2019.pdf",
+    "points_total": 106,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        45
+      ],
+      [
+        "DNS",
+        35
+      ],
+      [
+        "NAT",
+        34
+      ],
+      [
+        "DHCP",
+        19
+      ],
+      [
+        "HTTP",
+        8
+      ]
+    ]
+  },
+  {
+    "file": "IKT204 school exam V24 with answers.pdf",
+    "points_total": 0,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        57
+      ],
+      [
+        "NAT",
+        57
+      ],
+      [
+        "DNS",
+        43
+      ],
+      [
+        "CIDR_Subnet",
+        21
+      ],
+      [
+        "DHCP",
+        19
+      ]
+    ]
+  },
+  {
+    "file": "Packet analysis using Wireshark - Tagged.pdf",
+    "points_total": 0,
+    "top_topics": [
+      [
+        "DNS",
+        9
+      ],
+      [
+        "CIDR_Subnet",
+        2
+      ],
+      [
+        "TCP_SEQ",
+        1
+      ],
+      [
+        "NAT",
+        1
+      ],
+      [
+        "HTTP",
+        0
+      ]
+    ]
+  },
+  {
+    "file": "TCP socket programming - Tagged.pdf",
+    "points_total": 0,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        26
+      ],
+      [
+        "CIDR_Subnet",
+        0
+      ],
+      [
+        "HTTP",
+        0
+      ],
+      [
+        "OSI",
+        0
+      ],
+      [
+        "DNS",
+        0
+      ]
+    ]
+  },
+  {
+    "file": "IKT204 - all reccomended review questions with answer guides.docx",
+    "points_total": 0,
+    "top_topics": [
+      [
+        "TCP_SEQ",
+        182
+      ],
+      [
+        "NAT",
+        67
+      ],
+      [
+        "Routing",
+        58
+      ],
+      [
+        "CIDR_Subnet",
+        46
+      ],
+      [
+        "DNS",
+        38
+      ]
+    ]
+  }
+]

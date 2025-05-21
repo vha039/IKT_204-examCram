@@ -1,0 +1,180 @@
+{
+  "master_value_matrix": {
+    "main_matrix": {
+      "TCP_SEQ": 10.0,
+      "HTTP": 7.94,
+      "CIDR_Subnet": 7.66,
+      "Routing": 6.68,
+      "NAT_DHCP": 6.0,
+      "DNS": 5.95,
+      "UDP": 5.35,
+      "BitTorrent": 3.55,
+      "CRC": 3.34,
+      "SSL_TLS": 2.91,
+      "OSI": 2.12,
+      "Wireshark": 1.75,
+      "QUIC": 0.48
+    },
+    "topics": {
+      "TCP_SEQ": {
+        "topic_score": 10.0,
+        "sources": ["Ch3B", "TCP socket lab", "UDP/TCP Wireshark trace"],
+        "questions": {
+          "exam_hits": 26,
+          "exercise_hits": 31
+        },
+        "weighted_contents": {
+          "3-way handshake": 0.22,
+          "Fast Retransmit & Recovery": 0.17,
+          "AIMD & cwnd maths": 0.17,
+          "RTT / Timeout calc": 0.14,
+          "Selective ACK (SACK)": 0.11,
+          "Rare TCP flag cluster": 0.12,
+          "Port-scan trace cluster": 0.07
+        }
+      },
+      "HTTP": {
+        "topic_score": 7.94,
+        "sources": ["Ch2", "Wireshark lab"],
+        "questions": { "exam_hits": 27, "exercise_hits": 22 },
+        "weighted_contents": {
+          "Request/Response anatomy": 0.26,
+          "Persistent vs Non-persistent": 0.18,
+          "Cookies": 0.14,
+          "HTTP headers taxonomy": 0.14,
+          "HTTP/2 multiplexing": 0.15,
+          "Cache+HTTPS cluster": 0.13
+        }
+      },
+      "CIDR_Subnet": {
+        "topic_score": 7.66,
+        "sources": ["Ch4"],
+        "questions": { "exam_hits": 19, "exercise_hits": 17 },
+        "weighted_contents": {
+          "/Mask host math": 0.28,
+          "Longest-Prefix-Match": 0.22,
+          "Binary-decimal shortcut": 0.14,
+          "VLSM": 0.13,
+          "Reserved blocks": 0.12,
+          "Supernet aggregation": 0.11
+        }
+      },
+      "Routing": {
+        "topic_score": 6.68,
+        "sources": ["Ch5"],
+        "questions": { "exam_hits": 12, "exercise_hits": 9 },
+        "weighted_contents": {
+          "Dijkstra Link-State": 0.21,
+          "BGP Path Attributes": 0.18,
+          "OSPF areas / cost": 0.17,
+          "DV poison-reverse": 0.15,
+          "Route-select order": 0.14,
+          "SDN controller cluster": 0.15
+        }
+      },
+      "NAT_DHCP": {
+        "topic_score": 6.0,
+        "sources": ["Ch4"],
+        "questions": { "exam_hits": 22, "exercise_hits": 27 },
+        "weighted_contents": {
+          "Port-mapped NAT": 0.25,
+          "NAPT translation": 0.18,
+          "DHCP DORA": 0.20,
+          "Lease timers": 0.10,
+          "Hairpin/UPnP cluster": 0.27
+        }
+      },
+      "DNS": {
+        "topic_score": 5.95,
+        "sources": ["Ch2"],
+        "questions": { "exam_hits": 16, "exercise_hits": 15 },
+        "weighted_contents": {
+          "Iterative vs Recursive": 0.22,
+          "RR Types table": 0.18,
+          "Anycast hierarchy": 0.12,
+          "Caching & TTL": 0.15,
+          "DNSSEC cluster": 0.10,
+          "EDNS0 UDP 4096": 0.08,
+          "Zone-transfer cluster": 0.15
+        }
+      },
+      "UDP": {
+        "topic_score": 5.35,
+        "sources": ["Ch3A", "UDP socket lab"],
+        "questions": { "exam_hits": 11, "exercise_hits": 26 },
+        "weighted_contents": {
+          "Header & Pseudo-hdr checksum": 0.30,
+          "Socket demux 2-tuple": 0.25,
+          "Zero-checksum IPv6 rule": 0.15,
+          "Datagram size & frag": 0.15,
+          "Typical UDP apps": 0.15
+        }
+      },
+      "BitTorrent": {
+        "topic_score": 3.55,
+        "sources": ["Ch2 §2.5"],
+        "questions": { "exam_hits": 7, "exercise_hits": 8 },
+        "weighted_contents": {
+          "Rarest-first": 0.30,
+          "Tracker vs DHT": 0.20,
+          "Tit-for-tat choking": 0.20,
+          "Swarm ratio metric": 0.15,
+          "Magnet link cluster": 0.15
+        }
+      },
+      "CRC": {
+        "topic_score": 3.34,
+        "sources": ["Ch6"],
+        "questions": { "exam_hits": 4, "exercise_hits": 8 },
+        "weighted_contents": {
+          "Polynomial division": 0.28,
+          "Detection capability": 0.22,
+          "Ethernet FCS vs IP sum": 0.20,
+          "Parity/Berger cluster": 0.15,
+          "CRC-32 mnemonic": 0.15
+        }
+      },
+      "SSL_TLS": {
+        "topic_score": 2.91,
+        "sources": ["Ch8"],
+        "questions": { "exam_hits": 5, "exercise_hits": 7 },
+        "weighted_contents": {
+          "Handshake flight order": 0.30,
+          "Certificate chain": 0.20,
+          "Session key derivation": 0.20,
+          "Cipher-suite naming": 0.15,
+          "Nonce + anti-replay": 0.15
+        }
+      },
+      "OSI": {
+        "topic_score": 2.12,
+        "sources": ["Ch1"],
+        "questions": { "exam_hits": 14, "exercise_hits": 29 },
+        "weighted_contents": {
+          "Five vs Seven layer table": 0.40,
+          "Encapsulation stack": 0.35,
+          "Mnemonic cluster": 0.25
+        }
+      },
+      "Wireshark": {
+        "topic_score": 1.75,
+        "sources": ["Wireshark lab"],
+        "questions": { "exam_hits": 4, "exercise_hits": 9 },
+        "weighted_contents": {
+          "Follow TCP-stream": 0.50,
+          "Coloring rules": 0.20,
+          "Objects export cluster": 0.30
+        }
+      },
+      "QUIC": {
+        "topic_score": 0.48,
+        "sources": ["Ch2 slide 77"],
+        "questions": { "exam_hits": 0, "exercise_hits": 3 },
+        "weighted_contents": {
+          "0-RTT handshake": 0.60,
+          "Stream multiplex frame": 0.40
+        }
+      }
+    }
+  }
+}

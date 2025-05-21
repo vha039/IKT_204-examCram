@@ -1,0 +1,180 @@
+{
+  "file_index_v2": [
+    {
+      "id": "L1_Ch1_Intro",
+      "filename": "Chapter_1_24V_Lecture - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "Introduction to Computer Networks and the Internet",
+      "keywords": ["Internet fundamentals", "OSI layers", "TCP/IP 5-layer model", "encapsulation", "decapsulation", "protocols", "network edge", "network core", "packet switching", "circuit switching", "delay types", "d_prop", "d_trans", "d_queue", "throughput", "packet loss", "network security basics", "Internet history"],
+      "llm_cue": "Fundamentals of Internet, layers, delay types, Ch1 concepts"
+    },
+    {
+      "id": "L2_Ch2_App",
+      "filename": "Chapter_2_25V.pdf",
+      "type": "Lecture",
+      "primary_focus": "Application Layer",
+      "keywords": ["client-server architecture", "P2P architecture", "sockets", "port numbers", "HTTP versions", "persistent connections", "non-persistent connections", "HTTP messages", "GET", "POST", "cookies", "web caching", "ETag", "Cache-Control", "HOL blocking", "HTTP/2", "SMTP", "POP3", "IMAP", "DNS hierarchy", "DNS resolution", "iterative query", "recursive query", "DNS RR types", "A", "AAAA", "MX", "NS", "CNAME", "DNS caching", "TTL", "BitTorrent", "rarest-first", "tit-for-tat", "CDN", "DASH"],
+      "llm_cue": "HTTP, DNS, SMTP, P2P, CDN, application layer services, Ch2 details"
+    },
+    {
+      "id": "L3A_Ch3A_UDP_RDT",
+      "filename": "Chapter_3A_25V - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "Transport Layer (UDP, RDT Principles)",
+      "keywords": ["transport services", "multiplexing", "demultiplexing", "UDP header", "UDP checksum", "UDP use cases", "rdt1.0", "rdt2.0", "rdt2.1", "rdt2.2", "rdt3.0", "stop-and-wait", "ACKs", "NACKs", "timers", "sequence numbers", "pipelining", "Go-Back-N", "Selective Repeat"],
+      "llm_cue": "UDP, port numbers, multiplexing, reliable data transfer principles, rdt3.0, GBN, SR, Ch3 Part A"
+    },
+    {
+      "id": "L3B_Ch3B_TCP",
+      "filename": "Chapter_3B_25V.pdf",
+      "type": "Lecture",
+      "primary_focus": "Transport Layer (TCP)",
+      "keywords": ["TCP overview", "TCP segment structure", "TCP sequence numbers", "TCP ACK numbers", "3-way handshake", "4-way close", "TCP RDT", "RTT estimation", "Jacobson/Karels", "TCP timeout", "fast retransmit", "TCP flow control", "receive window", "rwnd", "TCP congestion control", "AIMD", "slow start", "ssthresh", "fast recovery", "TCP fairness"],
+      "llm_cue": "TCP details, handshake, flow control, congestion control (slow start, AIMD), RTT, segment structure, Ch3 Part B"
+    },
+    {
+      "id": "L4_Ch4_NetData",
+      "filename": "Chapter_4_25V - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "Network Layer: Data Plane",
+      "keywords": ["forwarding", "routing", "router architecture", "input ports", "output ports", "switching fabric", "IPv4 datagram format", "IP fragmentation", "MTU", "IPv4 addressing", "CIDR", "subnets", "subnet mask", "DHCP", "DORA", "giaddr", "NAT", "PAT", "NAT traversal", "IPv6 motivation", "IPv6 datagram format", "IPv6 tunneling", "SDN data plane", "match-action", "OpenFlow basics"],
+      "llm_cue": "IPv4, IPv6, datagrams, fragmentation, CIDR, subnetting, DHCP, NAT, router data plane, Ch4 content"
+    },
+    {
+      "id": "L5_Ch5_NetControl",
+      "filename": "Chapter_5_24V.pdf",
+      "type": "Lecture",
+      "primary_focus": "Network Layer: Control Plane",
+      "keywords": ["routing algorithms", "Link-State", "Dijkstra", "Distance-Vector", "Bellman-Ford", "count-to-infinity", "intra-AS routing", "OSPF", "LSA", "inter-AS routing", "BGP", "AS-PATH", "NEXT-HOP", "BGP policy", "eBGP", "iBGP", "SDN control plane", "OpenFlow controller", "ICMP", "ping", "traceroute"],
+      "llm_cue": "Routing algorithms (Dijkstra, Bellman-Ford), OSPF, BGP, ICMP, SDN control plane, Ch5 topics"
+    },
+    {
+      "id": "L6_Ch6_LinkLAN",
+      "filename": "Chapter_6_25V - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "The Link Layer and LANs",
+      "keywords": ["link layer services", "framing", "MAC access", "error detection", "error correction", "parity check", "Internet checksum", "CRC", "polynomial division", "Multiple Access Protocols", "TDMA", "FDMA", "Slotted ALOHA", "CSMA", "CSMA/CD", "CSMA/CA", "polling", "token passing", "MAC addressing", "ARP", "ARP query", "ARP response", "ARP cache", "Ethernet frame", "Ethernet standards", "learning switches", "switch table", "VLANs", "802.1Q", "Data Center Networking", "Day in the Life"],
+      "llm_cue": "Link layer, MAC addresses, ARP, Ethernet, switches, VLANs, CRC, multiple access protocols, Ch6 details"
+    },
+    {
+      "id": "L7_Ch7_Wireless",
+      "filename": "Chapter_7_25V - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "Wireless and Mobile Networks",
+      "keywords": ["wireless links", "path loss", "multipath propagation", "interference", "SNR", "infrastructure mode", "ad-hoc mode", "802.11", "WiFi", "BSS", "AP", "SSID", "beacon frames", "802.11 MAC", "CSMA/CA", "DIFS", "SIFS", "RTS", "CTS", "ACKs", "hidden terminal problem", "802.11 frame addressing", "mobility within subnet", "rate adaptation", "power management", "Bluetooth", "piconet"],
+      "llm_cue": "Wireless, WiFi, 802.11, CSMA/CA, RTS/CTS, hidden terminal, beacons, Ch7 concepts"
+    },
+    {
+      "id": "L8_Ch8_Security",
+      "filename": "Chapter_8_25V - Tagged.pdf",
+      "type": "Lecture",
+      "primary_focus": "Security in Computer Networks",
+      "keywords": ["confidentiality", "integrity", "authenticity", "availability", "non-repudiation", "eavesdropping", "spoofing", "replay attack", "DoS", "Kerckhoff's principle", "symmetric encryption", "secret key", "DES", "AES", "block cipher modes", "ECB", "CBC", "CTR", "asymmetric encryption", "public key", "private key", "RSA", "Diffie-Hellman", "key exchange", "hash function", "message digest", "MD5", "SHA", "MAC", "HMAC", "digital signature", "digital certificate", "CA", "X.509", "PGP", "SSL", "TLS", "TLS handshake", "ClientHello", "ServerHello", "cipher suite", "TLS nonces", "forward secrecy", "firewall", "ACL", "stateful inspection", "application gateway", "IDS", "IPS"],
+      "llm_cue": "Network security, crypto, symmetric/asymmetric keys, hashes, MACs, signatures, certificates, TLS, firewalls, Ch8 details"
+    },
+    {
+      "id": "LAB_WS",
+      "filename": "Packet analysis using Wireshark - Tagged.pdf",
+      "type": "Lab Guide",
+      "primary_focus": "Practical Wireshark Usage",
+      "keywords": ["Wireshark interface", "ping", "ICMP", "DNS query trace", "Wireshark filters", "capture filter", "display filter", "tcp.stream", "nmap", "ARP sweep", "HTTP trace"],
+      "llm_cue": "Wireshark usage, ping analysis, nmap, ICMP trace, DNS trace, HTTP trace practicals"
+    },
+    {
+      "id": "LAB_TCP",
+      "filename": "TCP socket programming - Tagged.pdf",
+      "type": "Lab Guide",
+      "primary_focus": "TCP Socket Programming (Winsock)",
+      "keywords": ["socket()", "bind()", "listen()", "accept()", "connect()", "send()", "recv()", "closesocket()", "WSAStartup()", "TCP client", "TCP server", "3-way handshake code", "4-tuple", "netstat -b", "firewall blocking"],
+      "llm_cue": "TCP socket programming, Winsock API, client-server TCP steps"
+    },
+    {
+      "id": "LAB_UDP",
+      "filename": "UDP socket programming - Tagged.pdf",
+      "type": "Lab Guide",
+      "primary_focus": "UDP Socket Programming (Winsock)",
+      "keywords": ["socket()", "bind()", "sendto()", "recvfrom()", "closesocket()", "WSAStartup()", "UDP client", "UDP server", "stateless", "endianness", "htons", "htonl", "INADDR_ANY", "loopback address", "127.0.0.1", "localhost", "ncat"],
+      "llm_cue": "UDP socket programming, Winsock API, endianness, ncat UDP"
+    },
+    {
+      "id": "EXAM16F",
+      "filename": "dat204-exam-fall 2016.pdf",
+      "type": "Past Exam",
+      "primary_focus": "IKT204 Exam Questions Fall 2016",
+      "keywords": ["exam questions 2016", "DAT204 fall 2016 topics"],
+      "llm_cue": "DAT204 F2016 exam specific questions"
+    },
+    {
+      "id": "EXAM17F",
+      "filename": "dat204-exam-fall 2017.pdf",
+      "type": "Past Exam",
+      "primary_focus": "IKT204 Exam Questions Fall 2017",
+      "keywords": ["exam questions 2017", "DAT204 fall 2017 topics"],
+      "llm_cue": "DAT204 F2017 exam specific questions"
+    },
+    {
+      "id": "EXAM17S",
+      "filename": "dat204-exam-spring 2017.pdf",
+      "type": "Past Exam",
+      "primary_focus": "IKT204 Exam Questions Spring 2017",
+      "keywords": ["exam questions 2017", "DAT204 spring 2017 topics"],
+      "llm_cue": "DAT204 S2017 exam specific questions"
+    },
+    {
+      "id": "EXAM18F",
+      "filename": "IKT204-exam-fall 2018.pdf",
+      "type": "Past Exam",
+      "primary_focus": "IKT204 Exam Questions Fall 2018",
+      "keywords": ["exam questions 2018", "DAT204 fall 2018 topics", "Wireshark HTTP 2018", "SMTP POP IMAP 2018", "DHCP 2018"],
+      "llm_cue": "DAT204 F2018 exam specific questions"
+    },
+    {
+      "id": "EXAM18S_utsatt",
+      "filename": "DAT204-G utsatt skoleeksamen 26.2.18.pdf", 
+      "type": "Past Exam (Text)",
+      "primary_focus": "IKT204 Resit Exam Questions Spring 2018",
+      "keywords": ["exam questions resit 2018", "mail access protocols 2018", "UDP sockets 2018", "HTTP protocol 2018", "packet scheduling 2018", "TCP sequence 2018", "TCP congestion 2018", "ARP 2018", "DHCP 2018", "BGP 2018", "IP subnetting 2018", "Dijkstra 2018", "SSL nonces 2018"],
+      "llm_cue": "DAT204 S2018 resit exam specific questions"
+    },
+    {
+      "id": "EXAM19F",
+      "filename": "dat204-exam-fall 2019.pdf",
+      "type": "Past Exam",
+      "primary_focus": "IKT204 Exam Questions Fall 2019",
+      "keywords": ["exam questions 2019", "NAT 2019", "CIDR 2019", "P2P distribution 2019", "TCP congestion 2019", "SSL 2019"],
+      "llm_cue": "DAT204 F2019 exam specific questions"
+    },
+    {
+      "id": "EXAM24V",
+      "filename": "IKT204 school exam V24 with answers.pdf",
+      "type": "Past Exam (with Answers)",
+      "primary_focus": "IKT204 Exam Questions Spring 2024 (Virtual School)",
+      "keywords": ["exam questions 2024", "Wireshark HTTP 2024", "DNS 2024", "DHCP 2024", "NAT 2024", "BGP 2024", "TCP congestion 2024", "SSL/TLS 2024"],
+      "llm_cue": "DAT204 V2024 exam specific questions and official answers"
+    },
+    {
+      "id": "REV_Q_MASTER",
+      "filename": "IKT204 – all review questions with answer guides.docx",
+      "type": "Review Questions & Solutions",
+      "primary_focus": "Comprehensive Chapter-by-Chapter Review Questions and Solutions",
+      "keywords": ["all IKT204 topics", "review questions Ch1", "solutions Ch1", "review questions Ch2", "solutions Ch2", "review questions Ch3", "solutions Ch3", "review questions Ch4", "solutions Ch4", "review questions Ch5", "solutions Ch5", "review questions Ch6", "solutions Ch6", "review questions Ch7", "solutions Ch7", "review questions Ch8", "solutions Ch8"],
+      "llm_cue": "IKT204 review questions, solutions for [Chapter X topic], R-type questions, P-type questions, full course review"
+    },
+    {
+      "id": "COURSE_OVERVIEW",
+      "filename": "Overview IKT204.docx",
+      "type": "Course Meta-Information",
+      "primary_focus": "IKT204 Course Structure, Syllabus, Learning Outcomes",
+      "keywords": ["IKT204 syllabus", "course description", "module objectives", "learning outcomes DAT204", "IKT204 chapter list"],
+      "llm_cue": "IKT204 course description, syllabus, module objectives, learning outcomes"
+    },
+    {
+      "id": "LECTURE_KEYWORD_MAP",
+      "filename": "Lecture topic, content and keyword map.json",
+      "type": "Internal Index",
+      "primary_focus": "Structured map of lecture content and keywords",
+      "keywords": ["lecture topic keywords", "IKT204 lecture structure map"],
+      "llm_cue": "Keywords from lecture map JSON, lecture topic relationships"
+    }
+  ]
+}

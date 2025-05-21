@@ -1,0 +1,802 @@
+[
+  {
+    "Q_ID": 1,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 2,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 3,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 4,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 5,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 6,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 7,
+    "Topic": "DNS",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.95,
+    "Recognition_Cue": "hostname\u2192IP, RR types"
+  },
+  {
+    "Q_ID": 8,
+    "Topic": "BitTorrent",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 4.26,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 9,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 10,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 11,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 12,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 13,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 14,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 15,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 16,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 17,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 18,
+    "Topic": "OSI",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.41,
+    "Recognition_Cue": "Which layer? encapsulation"
+  },
+  {
+    "Q_ID": 19,
+    "Topic": "SSL_TLS",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 2.91,
+    "Recognition_Cue": "TLS handshake, cert"
+  },
+  {
+    "Q_ID": 20,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 21,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 22,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 23,
+    "Topic": "OSI",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.41,
+    "Recognition_Cue": "Which layer? encapsulation"
+  },
+  {
+    "Q_ID": 24,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 25,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 26,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 27,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 28,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 29,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 30,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 31,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 32,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 33,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 34,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 35,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 36,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 37,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 38,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 39,
+    "Topic": "DNS",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.95,
+    "Recognition_Cue": "hostname\u2192IP, RR types"
+  },
+  {
+    "Q_ID": 40,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 41,
+    "Topic": "QUIC",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 0.58,
+    "Recognition_Cue": "QUIC 0\u2011RTT, streams"
+  },
+  {
+    "Q_ID": 42,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 43,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 44,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 45,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 46,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 47,
+    "Topic": "OSI",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.41,
+    "Recognition_Cue": "Which layer? encapsulation"
+  },
+  {
+    "Q_ID": 48,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 49,
+    "Topic": "BitTorrent",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 4.26,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 50,
+    "Topic": "DNS",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.95,
+    "Recognition_Cue": "hostname\u2192IP, RR types"
+  },
+  {
+    "Q_ID": 51,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 52,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 53,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 54,
+    "Topic": "CRC",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 3.34,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 55,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 56,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 57,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 58,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 59,
+    "Topic": "BitTorrent",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 4.26,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 60,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 61,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 62,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 63,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 64,
+    "Topic": "DNS",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.95,
+    "Recognition_Cue": "hostname\u2192IP, RR types"
+  },
+  {
+    "Q_ID": 65,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 66,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 67,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 68,
+    "Topic": "BitTorrent",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 4.26,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 69,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 70,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 71,
+    "Topic": "Routing",
+    "Complexity": 4,
+    "Points": 8,
+    "Adj_Value": 8.91,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 72,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 73,
+    "Topic": "TCP_SEQ",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 12.0,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 74,
+    "Topic": "UDP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 5.35,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 75,
+    "Topic": "Wireshark",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 1.75,
+    "Recognition_Cue": "Wireshark filter/trace"
+  },
+  {
+    "Q_ID": 76,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 77,
+    "Topic": "CIDR_Subnet",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 9.19,
+    "Recognition_Cue": "CIDR / subnet math"
+  },
+  {
+    "Q_ID": 78,
+    "Topic": "HTTP",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 7.94,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 79,
+    "Topic": "Routing",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 8.02,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 80,
+    "Topic": "Wireshark",
+    "Complexity": 2,
+    "Points": 4,
+    "Adj_Value": 1.75,
+    "Recognition_Cue": "Wireshark filter/trace"
+  },
+  {
+    "Q_ID": 81,
+    "Topic": "UDP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 6.42,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 82,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 83,
+    "Topic": "CRC",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 2.23,
+    "Recognition_Cue": "CRC/FCS polynomial"
+  },
+  {
+    "Q_ID": 84,
+    "Topic": "HTTP",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 5.29,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 85,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 86,
+    "Topic": "OSI",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.41,
+    "Recognition_Cue": "Which layer? encapsulation"
+  },
+  {
+    "Q_ID": 87,
+    "Topic": "NAT_DHCP",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 7.2,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 88,
+    "Topic": "Routing",
+    "Complexity": 3,
+    "Points": 6,
+    "Adj_Value": 8.02,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  },
+  {
+    "Q_ID": 89,
+    "Topic": "HTTP",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 5.29,
+    "Recognition_Cue": "HTTP GET/POST, headers, cookies"
+  },
+  {
+    "Q_ID": 90,
+    "Topic": "NAT_DHCP",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 4.0,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 91,
+    "Topic": "OSI",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.41,
+    "Recognition_Cue": "Which layer? encapsulation"
+  },
+  {
+    "Q_ID": 92,
+    "Topic": "TCP_SEQ",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 6.67,
+    "Recognition_Cue": "Seq/Ack, cwnd, handshake"
+  },
+  {
+    "Q_ID": 93,
+    "Topic": "BitTorrent",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 2.37,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 94,
+    "Topic": "BitTorrent",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 2.37,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 95,
+    "Topic": "SSL_TLS",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 1.94,
+    "Recognition_Cue": "TLS handshake, cert"
+  },
+  {
+    "Q_ID": 96,
+    "Topic": "UDP",
+    "Complexity": 1,
+    "Points": 2,
+    "Adj_Value": 3.57,
+    "Recognition_Cue": "UDP port, checksum"
+  },
+  {
+    "Q_ID": 97,
+    "Topic": "BitTorrent",
+    "Complexity": 5,
+    "Points": 10,
+    "Adj_Value": 5.07,
+    "Recognition_Cue": "BitTorrent swarm, rarest-first"
+  },
+  {
+    "Q_ID": 98,
+    "Topic": "NAT_DHCP",
+    "Complexity": 5,
+    "Points": 10,
+    "Adj_Value": 8.57,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 99,
+    "Topic": "NAT_DHCP",
+    "Complexity": 5,
+    "Points": 10,
+    "Adj_Value": 8.57,
+    "Recognition_Cue": "private\u2194public IP, DORA"
+  },
+  {
+    "Q_ID": 100,
+    "Topic": "Routing",
+    "Complexity": 5,
+    "Points": 10,
+    "Adj_Value": 9.54,
+    "Recognition_Cue": "OSPF/BGP, LS/DV, Dijkstra"
+  }
+]
